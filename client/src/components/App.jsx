@@ -1,13 +1,47 @@
-// import { useState } from 'react'
+import React, { useState } from 'react';
+import CssBaseline from "@mui/material/CssBaseline";
+import { Container } from "@mui/material";
+import fontTheme  from "../AppTheme";
+// import { darkTheme, fontTheme } from "../AppTheme";
+import { ThemeProvider } from "@mui/material/styles";
+
 import Home from './Home';
-import './App.css'
+import ResponsiveAppBar from "./styleNavMui/ResponsiveAppBar";
+import './App.css';
 
 function App() {
+  const[ toggleDarkMode, setToggleDarkMode ] = useState(true);
 
+  const toggleDarkTheme = () => {
+    setToggleDarkMode(!toggleDarkMode);
+  };
 
+  const darkTheme = createTheme({
+    palette: {
+      mode: toggleDarkMode ? 'dark' : 'light',
+      primary: {
+        main: '#1E1E1E'
+      },
+      secondary: {
+        main: '#D9D9D9'
+      },
+    },
+  });
+  
   return (
     <header>
-      <Home />
+      <ThemeProvider theme={{ darkTheme, fontTheme }}>
+        <Container>
+          <header>
+             <ResponsiveAppBar 
+                toggleDarkMode = { toggleDarkMode }
+                toggleDarkTheme = { toggleDarkTheme }
+              />
+          </header>
+          <CssBaseline />
+          <Home />
+        </Container>
+    </ThemeProvider>
     </header>
   );
 }

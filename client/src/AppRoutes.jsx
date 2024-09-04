@@ -1,15 +1,16 @@
-import App from "./components/App";
-import Home from "./components/Home";
-import ErrorPage from "./components/ErrorPage";
-import PhotographyMain from "./components/PhotographyMain";
-import Spaces from "./components/Spaces";
-import Places from "./components/Places";
-import SpacesOverlay from "./components/SpacesOverlay";
-import PlacesOverlay from "./components/PlacesOverlay";
 import Airports from "./components/Airports";
 import AirportsOverlay from "./components/AirportsOverlay";
+import App from "./components/App";
+import Code from "./components/Code";
+import ErrorPage from "./components/ErrorPage";
 import FromTheHip from "./components/FromTheHip";
 import FromTheHipOverlay from "./components/FromTheHipOverlay";
+import Home from "./components/Home";
+import PhotographyMain from "./components/PhotographyMain";
+import Places from "./components/Places";
+import PlacesOverlay from "./components/PlacesOverlay";
+import Spaces from "./components/Spaces";
+import SpacesOverlay from "./components/SpacesOverlay";
 
 
 const routes = [
@@ -21,6 +22,10 @@ const routes = [
             {
                 path: "/",
                 element: <Home />
+            },
+            {
+                path: "/code",
+                element: <Code />
             },
             {
                 path: "/photography",
