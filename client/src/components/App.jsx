@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import CssBaseline from "@mui/material/CssBaseline";
 import { Container } from "@mui/material";
+import { Outlet } from "react-router-dom";
 import fontTheme  from "../AppTheme";
+import { createTheme } from "@mui/material/styles";
 // import { darkTheme, fontTheme } from "../AppTheme";
 import { ThemeProvider } from "@mui/material/styles";
 
-import Home from './Home';
+// import Home from './Home';
 import ResponsiveAppBar from "./styleNavMui/ResponsiveAppBar";
 import './App.css';
 
@@ -27,10 +29,9 @@ function App() {
       },
     },
   });
-  
+
   return (
-    <header>
-      <ThemeProvider theme={{ darkTheme, fontTheme }}>
+      <ThemeProvider theme={{darkTheme, fontTheme}}>
         <Container>
           <header>
              <ResponsiveAppBar 
@@ -38,11 +39,12 @@ function App() {
                 toggleDarkTheme = { toggleDarkTheme }
               />
           </header>
-          <CssBaseline />
-          <Home />
+          <main>
+            <CssBaseline />
+            <Outlet />
+          </main>
         </Container>
     </ThemeProvider>
-    </header>
   );
 }
 

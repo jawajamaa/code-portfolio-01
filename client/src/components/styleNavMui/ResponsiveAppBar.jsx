@@ -13,11 +13,12 @@ import Switch from "@mui/material/Switch";
 
 const pages = [
   {name: "Home", url: "/"},
-  {name: "Mobile", url: "/mobilewall"},
-  {name: "Desktop", url: "/desktopwall"},
-  {name: "Add Wallpaper" ,url: "/addwallpaper"},
-  {name: "User" ,url: "/user"},
-  // {name: "Make a Comment!" ,url: "/makecomment"}
+  {name: "Code", url: "/code"},
+  {name: "Photography", url: "/photography"},
+  {name: "Spaces" ,url: "/photography/spaces"},
+  {name: "Places" ,url: "/photography/places"},
+  {name: "Airports" ,url: "/airports"},
+  {name: "FromTheHip" ,url: "/from-the-hip"},
 ];
 
 function ResponsiveAppBar({ toggleDarkMode, toggleDarkTheme }) {
