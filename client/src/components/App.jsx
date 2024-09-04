@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import CssBaseline from "@mui/material/CssBaseline";
 import { Container } from "@mui/material";
 import { Outlet } from "react-router-dom";
-import fontTheme  from "../AppTheme";
 import { createTheme } from "@mui/material/styles";
-// import { darkTheme, fontTheme } from "../AppTheme";
+import { darkTheme, fontTheme } from "../AppTheme";
 import { ThemeProvider } from "@mui/material/styles";
 
 // import Home from './Home';
@@ -18,20 +17,13 @@ function App() {
     setToggleDarkMode(!toggleDarkMode);
   };
 
-  const darkTheme = createTheme({
-    palette: {
-      mode: toggleDarkMode ? 'dark' : 'light',
-      primary: {
-        main: '#1E1E1E'
-      },
-      secondary: {
-        main: '#D9D9D9'
-      },
-    },
+  const combinedTheme = createTheme({
+    ...darkTheme(toggleDarkMode),
+    ...fontTheme,
   });
 
   return (
-      <ThemeProvider theme={{darkTheme, fontTheme}}>
+      <ThemeProvider theme={combinedTheme}>
         <Container>
           <header>
              <ResponsiveAppBar 

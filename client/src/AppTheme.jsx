@@ -1,6 +1,5 @@
-// import React from "react";
-import PlayfairDisplay from "./Fonts/PlayfairDisplay-VariableFont_wght.ttf";
 import { createTheme } from "@mui/material/styles";
+import PlayfairDisplay from "./Fonts/PlayfairDisplay-VariableFont_wght.ttf";
 
 const playfairDisplay = {
     fontFamily: "PlayfairDisplay",
@@ -29,20 +28,21 @@ const fontTheme = createTheme({
     }
 });
 
-export default fontTheme;
+// export default fontTheme;
 
   // applying the primary and secondary theme colors
-//   const darkTheme = createTheme({
-//     palette: {
-//       mode: toggleDarkMode ? 'dark' : 'light',
-//       primary: {
-//         main: '#1E1E1E'
-//       },
-//       secondary: {
-//         main: '#D9D9D9'
-//       },
-//     },
-//   });
+  const darkTheme = (toggleDarkMode) => 
+    createTheme({
+        palette: {
+          mode: toggleDarkMode ? 'dark' : 'light',
+          primary: {
+            main: '#1E1E1E'
+          },
+          secondary: {
+            main: '#D9D9D9'
+          },
+        },
+    });
 
 
-// export { darkTheme, fontTheme };
+export { darkTheme, fontTheme };
