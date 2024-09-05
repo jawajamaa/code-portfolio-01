@@ -22,6 +22,8 @@ function App() {
     ...fontTheme,
   });
 
+  console.log(toggleDarkMode ? "Dark Mode" : "Light Mode");
+  
   return (
       <ThemeProvider theme={combinedTheme}>
         <Container>

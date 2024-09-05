@@ -19,11 +19,16 @@ const fontTheme = createTheme({
     typography: {
         fontfamily: ['"Open Sans"', "PlayfairDisplay", "Roboto"].join(","),
     },
-    overrides: {
+    components: {
         MuiCssBaseline: {
-            "@global": {
-                "@font-face": [playfairDisplay],
-            },
+            styleOverrides: {
+                body: {
+                    fontfamily: '"PlayfairDisplay", "Open Sans", "Roboto", sans-serif',
+                },
+                h2: {
+                    fontfamily: '"PlayfairDisplay", "Open Sans", "Roboto", sans-serif',
+                },
+            }
         }
     }
 });

@@ -15,10 +15,10 @@ const pages = [
   {name: "Home", url: "/"},
   {name: "Code", url: "/code"},
   {name: "Photography", url: "/photography"},
-  {name: "Spaces" ,url: "/photography/spaces"},
-  {name: "Places" ,url: "/photography/places"},
-  {name: "Airports" ,url: "/airports"},
-  {name: "FromTheHip" ,url: "/from-the-hip"},
+  {name: "Space" ,url: "/photography/space"},
+  {name: "Place" ,url: "/photography/place"},
+  {name: "Airport" ,url: "/photography/airport"},
+  {name: "From The Hip" ,url: "/photography/from-the-hip"},
 ];
 
 function ResponsiveAppBar({ toggleDarkMode, toggleDarkTheme }) {
