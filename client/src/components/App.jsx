@@ -3,7 +3,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { Container } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import { createTheme } from "@mui/material/styles";
-import { darkTheme, fontTheme } from "../AppTheme";
+// import { darkTheme } from "../AppTheme";
+// import { darkTheme, fontTheme } from "../AppTheme";
 import { ThemeProvider } from "@mui/material/styles";
 
 // import Home from './Home';
@@ -17,15 +18,30 @@ function App() {
     setToggleDarkMode(!toggleDarkMode);
   };
 
-  const combinedTheme = createTheme({
-    ...darkTheme(toggleDarkMode),
-    ...fontTheme,
+  const darkTheme = createTheme({
+      palette: {
+        mode: toggleDarkMode ? 'dark' : 'light',
+        primary: {
+          main: '#1E1E1E'
+        },
+        secondary: {
+          main: '#D9D9D9'
+        },
+      },
   });
 
+  // const combinedTheme = createTheme({
+  //   ...darkTheme,
+  //   // ...darkTheme(toggleDarkMode),
+  //   ...fontTheme,
+  // });
+
   console.log(toggleDarkMode ? "Dark Mode" : "Light Mode");
-  
+  // console.log(combinedTheme);
+
   return (
-      <ThemeProvider theme={combinedTheme}>
+      <ThemeProvider theme={darkTheme}>
+      {/* <ThemeProvider theme={combinedTheme}> */}
         <Container>
           <header>
              <ResponsiveAppBar 
@@ -34,8 +50,8 @@ function App() {
               />
           </header>
           <main>
-            <CssBaseline />
             <Outlet />
+            <CssBaseline />
           </main>
         </Container>
     </ThemeProvider>
