@@ -22,13 +22,25 @@ function App() {
       palette: {
         mode: toggleDarkMode ? 'dark' : 'light',
         primary: {
-          main: '#1E1E1E'
+          main: '#212121'
         },
         secondary: {
-          main: '#D9D9D9'
+          main: '#00e5ff'
         },
       },
   });
+
+  // const darkTheme = createTheme({
+  //     palette: {
+  //       mode: toggleDarkMode ? 'dark' : 'light',
+  //       primary: {
+  //         main: '#1E1E1E'
+  //       },
+  //       secondary: {
+  //         main: '#D9D9D9'
+  //       },
+  //     },
+  // });
 
   // const combinedTheme = createTheme({
   //   ...darkTheme,
