@@ -6,6 +6,7 @@ import { createTheme } from "@mui/material/styles";
 // import { darkTheme } from "../AppTheme";
 // import { darkTheme, fontTheme } from "../AppTheme";
 import { ThemeProvider } from "@mui/material/styles";
+import { AppBarRenderProvider } from "..providers/AppBarRenderContext";
 
 // import Home from './Home';
 import ResponsiveAppBar from "./styleNavMui/ResponsiveAppBar";
@@ -54,18 +55,20 @@ function App() {
   return (
       <ThemeProvider theme={darkTheme}>
       {/* <ThemeProvider theme={combinedTheme}> */}
-        <Container>
-          <header>
-             <ResponsiveAppBar 
-                toggleDarkMode = { toggleDarkMode }
-                toggleDarkTheme = { toggleDarkTheme }
-              />
-          </header>
-          <main>
-            <Outlet />
-            <CssBaseline />
-          </main>
-        </Container>
+        <AppBarRenderProvider>
+          <Container>
+            <header>
+              <ResponsiveAppBar 
+                  toggleDarkMode = { toggleDarkMode }
+                  toggleDarkTheme = { toggleDarkTheme }
+                />
+            </header>
+            <main>
+              <Outlet />
+              <CssBaseline />
+            </main>
+          </Container>
+        </AppBarRenderProvider>
     </ThemeProvider>
   );
 }

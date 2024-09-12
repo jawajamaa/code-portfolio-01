@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container } from "@mui/material";
 
+import { useAppBarRender } from "../providers/AppBarRenderContext";
+
 function Home(){
+    const{ isAppBarRender, setIsAppBarRender } = useAppBarRender();
+
+    // useEffect()
+
     return(
         <Container>
             <h1>There's no Place Like /</h1>
