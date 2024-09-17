@@ -1,12 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Container } from "@mui/material";
 
-import { useAppBarRender } from "../providers/AppBarRenderContext";
 
 function Home(){
-    const{ isAppBarRender, setIsAppBarRender } = useAppBarRender();
-
-    // useEffect()
 
     return(
         <Container>
