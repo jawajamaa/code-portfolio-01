@@ -6,14 +6,16 @@ import { createTheme } from "@mui/material/styles";
 // import { darkTheme } from "../AppTheme";
 // import { darkTheme, fontTheme } from "../AppTheme";
 import { ThemeProvider } from "@mui/material/styles";
-import { AppBarRenderProvider } from "..providers/AppBarRenderContext";
+import { AppBarRenderProvider, useAppBarRender } from "../providers/AppBarRenderContext";
 
 // import Home from './Home';
+import RenderAppBarOrNot from "./styleNavMui/RenderAppBarOrNot";
 import ResponsiveAppBar from "./styleNavMui/ResponsiveAppBar";
 import './App.css';
 
 function App() {
-  const[ toggleDarkMode, setToggleDarkMode ] = useState(true);
+  const[toggleDarkMode, setToggleDarkMode] = useState(true);
+  // const{ isAppBarRender } = useAppBarRender();
 
   const toggleDarkTheme = () => {
     setToggleDarkMode(!toggleDarkMode);
@@ -50,7 +52,7 @@ function App() {
   // });
 
   console.log(toggleDarkMode ? "Dark Mode" : "Light Mode");
-  // console.log(combinedTheme);
+  // console.log(isAppBarRender ? "True" : "False");
 
   return (
       <ThemeProvider theme={darkTheme}>
@@ -58,10 +60,12 @@ function App() {
         <AppBarRenderProvider>
           <Container>
             <header>
-              <ResponsiveAppBar 
-                  toggleDarkMode = { toggleDarkMode }
-                  toggleDarkTheme = { toggleDarkTheme }
-                />
+              <RenderAppBarOrNot>
+                <ResponsiveAppBar 
+                    toggleDarkMode = { toggleDarkMode }
+                    toggleDarkTheme = { toggleDarkTheme }
+                  />
+              </RenderAppBarOrNot>
             </header>
             <main>
               <Outlet />
