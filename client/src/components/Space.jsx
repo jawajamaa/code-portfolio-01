@@ -1,9 +1,10 @@
 import React from "react";
+import { Typography } from "@mui/material";
 
 function Space(){
     return(
         <>
-            <h2>Space 1999!</h2>
+            <Typography>Space 1999!</Typography>
         </>
     )
 }

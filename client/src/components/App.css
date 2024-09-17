@@ -5,6 +5,19 @@
   text-align: center;
 }
 
+.link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: red;
+}
+
+.link:visited {
+  color: #fff;
+}
+
 /* .App {
   display: flex;
   flex-direction: row;

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { useUrl } from "../providers/UrlContext";
 
 
@@ -8,6 +9,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 function Home(){
     const { myGhUrl } = useUrl();
+    
+// give GH and aperture icons their own Grid locations for better spacing?
 
     return(
         <Box sx={{ flexGrow:1 }}>
@@ -16,15 +19,25 @@ function Home(){
                     <Typography>timothy ryon</Typography>
                 </Grid2>
                 <Grid2 size={6}>
-                    <Typography>01100011 01101111 01100100 01100101 </Typography>
+                    <NavLink to={`/code`}>
+                        <Typography
+                            class={"link"}>
+                                01100011 01101111 01100100 01100101 
+                        </Typography>
+                    </NavLink>
                     <a href = { myGhUrl }
-                        target = "_blank">
+                        target = "_blank"
+                        class={"link"}>
                         <GitHubIcon />
                     </a>
                 </Grid2>
                 <Grid2 size={6}>
                     <Typography>Photography</Typography>
-                    <CameraIcon />
+                    <NavLink
+                        to = {`/photography`}
+                        class={"link"}>
+                        <CameraIcon />
+                    </NavLink>
                 </Grid2>    
             </Grid2>
         </Box>

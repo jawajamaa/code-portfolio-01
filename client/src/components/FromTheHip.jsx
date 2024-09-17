@@ -1,9 +1,10 @@
 import React from "react";
+import { Typography } from "@mui/material";
 
 function FromTheHip() {
     return(
         <>
-            <h3>FromTheHip</h3>
+            <Typography>FromTheHip</Typography>
         </>
     )
 };

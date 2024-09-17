@@ -1,9 +1,10 @@
 import React from "react";
+import { Typography } from "@mui/material";
 
 function Airport() {
     return(
         <>
-            <h3>Airport is where the Home is...1947</h3>
+            <Typography>Airport is where the Home is...1947</Typography>
         </>
     )
 };

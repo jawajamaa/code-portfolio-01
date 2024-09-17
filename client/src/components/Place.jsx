@@ -1,9 +1,10 @@
 import React from "react";
+import { Typography } from "@mui/material";
 
 function Place(){
     return(
         <>
-            <h2>Place 1997!</h2>
+            <Typography>Place 1997!</Typography>
         </>
     )
 }
