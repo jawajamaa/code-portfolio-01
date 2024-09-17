@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
+import { Outlet } from "react-router-dom";
 import CssBaseline from "@mui/material/CssBaseline";
 import { Container } from "@mui/material";
-import { Outlet } from "react-router-dom";
-import { createTheme } from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 // import { darkTheme } from "../AppTheme";
 // import { darkTheme, fontTheme } from "../AppTheme";
-import { ThemeProvider } from "@mui/material/styles";
+import { UrlProvider } from "../providers/UrlContext";
 
 // import Home from './Home';
 import RenderAppBarOrNot from "./styleNavMui/RenderAppBarOrNot";
@@ -52,8 +52,9 @@ function App() {
   console.log(toggleDarkMode ? "Dark Mode" : "Light Mode");
 
   return (
-      <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={darkTheme}>
       {/* <ThemeProvider theme={combinedTheme}> */}
+      <UrlProvider>
         <Container>
           <header>
             <RenderAppBarOrNot>
@@ -68,6 +69,7 @@ function App() {
             <CssBaseline />
           </main>
         </Container>
+      </UrlProvider>
     </ThemeProvider>
   );
 }

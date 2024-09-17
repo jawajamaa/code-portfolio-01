@@ -1,9 +1,13 @@
 import React from "react";
+import { useUrl } from "../providers/UrlContext";
+
+
 import { Box, Grid2, Typography } from "@mui/material";
 import CameraIcon from '@mui/icons-material/Camera';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 function Home(){
+    const { myGhUrl } = useUrl();
 
     return(
         <Box sx={{ flexGrow:1 }}>
@@ -13,7 +17,10 @@ function Home(){
                 </Grid2>
                 <Grid2 size={6}>
                     <Typography>01100011 01101111 01100100 01100101 </Typography>
-                    <GitHubIcon />
+                    <a href = { myGhUrl }
+                        target = "_blank">
+                        <GitHubIcon />
+                    </a>
                 </Grid2>
                 <Grid2 size={6}>
                     <Typography>Photography</Typography>
