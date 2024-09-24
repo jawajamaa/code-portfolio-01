@@ -1,20 +1,24 @@
-from flask import Flask
+from flask import Flask, jsonify, make_response
+from flask_restful import Resource
 
-from config import app
-# from flask import Flask, make_response, jsonify
-# from flask_migrate import Migrate
-# from flask_restful import Resource
+from config import app, db, api
 
-# from flask_cors import CORS
+# from models import *
 
-# app = Flask(__name__)
+class Home(Resource):
 
-# CORS(app)
+    def get(self):
+        response_dict = {
+            "message": "tim ryon's photography portfolio"
+        }
 
+        return make_response(
+                response_dict,
+                200
+        )
+    
+api.add_resource(Home, '/')
 
-@app.route('/')
-def index():
-    return '<h1>Welcome to the Jungle!!</h1>'
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
