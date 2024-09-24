@@ -17,17 +17,18 @@ function Home(){
             <Grid2 container spacing={2}>
                 <Grid2 size={12}>
                     <Typography>timothy ryon</Typography>
+                    <Typography>Developer</Typography>
                 </Grid2>
                 <Grid2 size={6}>
                     <NavLink to={`/code`}>
                         <Typography
-                            class={"link"}>
+                            className={"link"}>
                                 01100011 01101111 01100100 01100101 
                         </Typography>
                     </NavLink>
                     <a href = { myGhUrl }
                         target = "_blank"
-                        class={"link"}>
+                        className={"link"}>
                         <GitHubIcon />
                     </a>
                 </Grid2>
@@ -35,7 +36,7 @@ function Home(){
                     <Typography>Photography</Typography>
                     <NavLink
                         to = {`/photography`}
-                        class={"link"}>
+                        className={"link"}>
                         <CameraIcon />
                     </NavLink>
                 </Grid2>    
