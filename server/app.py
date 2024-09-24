@@ -1,15 +1,15 @@
-from flask import Flask, jsonify, make_response
+from flask import make_response
 from flask_restful import Resource
 
 from config import app, db, api
 
-# from models import *
+from models import Code, Image, PopQuiz
 
 class Home(Resource):
 
     def get(self):
         response_dict = {
-            "message": "tim ryon's photography portfolio"
+            "message": "tim ryon's website"
         }
 
         return make_response(
@@ -18,6 +18,48 @@ class Home(Resource):
         )
     
 api.add_resource(Home, '/')
+
+class CodeFiles(Resource):
+
+    def get(self):
+        response_dict = {
+            "message" : "tim ryon's code files"
+        }
+
+        return make_response(
+            response_dict,
+            200
+        )
+    
+api.add_resource(CodeFiles, '/codefiles')
+
+class ImageFiles(Resource):
+
+    def get(self):
+        response_dict = {
+            "message" : "tim ryon's image files" 
+        }
+
+        return make_response(
+            response_dict,
+            200
+        )
+    
+api.add_resource(ImageFiles, '/imagefiles')
+
+class QuizFiles(Resource):
+
+    def get(self):
+        response_dict = {
+            "message" : "tim ryon's PopQuiz files"
+        }
+
+        return make_response(
+            response_dict,
+            200
+        )
+    
+api.add_resource(QuizFiles, '/quizfiles')
 
 
 if __name__ == '__main__':
