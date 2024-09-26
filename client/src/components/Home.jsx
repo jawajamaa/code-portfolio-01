@@ -6,9 +6,10 @@ import { useUrl } from "../providers/UrlContext";
 import { Box, Grid2, Typography } from "@mui/material";
 import CameraIcon from '@mui/icons-material/Camera';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function Home(){
-    const { myGhUrl } = useUrl();
+    const { myGhUrl, myLinkedIn } = useUrl();
     
 // give GH and aperture icons their own Grid locations for better spacing?
 
@@ -26,11 +27,20 @@ function Home(){
                                 01100011 01101111 01100100 01100101 
                         </Typography>
                     </NavLink>
+                </Grid2>
+                <Grid2 size={3}>
                     <a href = { myGhUrl }
                         target = "_blank"
                         className={"link"}>
                         <GitHubIcon />
                     </a>
+                </Grid2>
+                <Grid2 size={3}>
+                    <a href = { myLinkedIn }
+                        target = "_blank"
+                        className = {"link"}>
+                            <LinkedInIcon />
+                        </a>
                 </Grid2>
                 <Grid2 size={6}>
                     <Typography>Photography</Typography>
