@@ -2,11 +2,12 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useUrl } from "../providers/UrlContext";
 
-
 import { Box, Grid2, Typography } from "@mui/material";
-import CameraIcon from '@mui/icons-material/Camera';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import CameraIcon from "@mui/icons-material/Camera";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
+import bwHeadshot from "../../public/images/20240806_Ryon-Timothy_312_bw-sm.jpg";
 
 function Home(){
     const { myGhUrl, myLinkedIn } = useUrl();
@@ -21,6 +22,10 @@ function Home(){
                     <Typography>Developer</Typography>
                 </Grid2>
                 <Grid2 size={6}>
+                    <img src = {bwHeadshot} 
+                        width = "425"/>
+                </Grid2>
+                <Grid2 size={3}>
                     <NavLink to={`/code`}>
                         <Typography
                             className={"link"}>
@@ -42,7 +47,7 @@ function Home(){
                             <LinkedInIcon />
                         </a>
                 </Grid2>
-                <Grid2 size={6}>
+                <Grid2 size={3}>
                     <Typography>Photography</Typography>
                     <NavLink
                         to = {`/photography`}
