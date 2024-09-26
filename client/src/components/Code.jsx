@@ -1,4 +1,5 @@
 import { Box, Grid2, Typography } from "@mui/material";
+import DownloadIcon from '@mui/icons-material/Download';
 import IconLabelButton from "./styleNavMui/IconLabelButton";
 import resume from "../../public/documents/Ryon-Timothy_Resume.pdf";
 
@@ -13,6 +14,7 @@ function Code() {
                 <Grid2 size={12}>
                     <a href={resume} download="Ryon-Timothy_Resume">
                         <IconLabelButton 
+                            icon={<DownloadIcon />}
                             label="Download Resume"/>
                     </a>
                 </Grid2>
