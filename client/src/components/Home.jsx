@@ -20,7 +20,7 @@ const Item = styled(Paper)(({ theme }) => ({
     textAlign: "center",
     color: theme.palette.text.secondary,
     ...theme.applyStyles("dark", {
-        backgroundColor: "#1a2027",
+        backgroundColor: "dark",
     }),
 }));
 
@@ -41,7 +41,7 @@ function Home(){
                                 <GitHubIcon />
                                 </a>
                             </Grid2>
-                            <Grid2 size={{ xs: 'grow', md: 6 }} offset={{ md: 2 }}>
+                            <Grid2 size={{ xs: 'grow', md: 4 }} offset={{ md: 2 }}>
                                 <Typography>timothy ryon</Typography>
                                 <Typography>Developer</Typography>
                             </Grid2>
@@ -63,26 +63,33 @@ function Home(){
                 </Grid2>
                 <Grid2 size={6}>
                     <Item>
-                        <NavLink to={`/code`}>
-                            <Typography
-                                className={"link"}>
-                                    01100011 01101111 01100100 01100101 
-                            </Typography>
-                        </NavLink>
-
-                        <a href={resume} download="Ryon-Timothy_Resume">
-                            <IconLabelButton 
-                                icon={<DownloadIcon />}
-                                label="Download Resume"/>
-                        </a>
-
-
-                        <Typography>Photography</Typography>
-                        <NavLink
-                            to = {`/photography`}
-                            className={"link"}>
-                            <CameraIcon />
-                        </NavLink>
+                        <Grid2 container spacing={2}>
+                            <Grid2 size={12}>
+{/* '01100011 01101111 01100100 01100101' is replaced with 'A little more about me' which takes you to the page fka 'Code' */}
+                                <NavLink to={`/code`}>
+                                    <Typography
+                                        className={"link"}>
+                                            01100011 01101111 01100100 01100101 
+                                    </Typography>
+                                </NavLink>
+                            </Grid2>
+                            <Grid2 size={12}>
+                                <a href={resume} download="Ryon-Timothy_Resume">
+                                    <IconLabelButton 
+                                        icon={<DownloadIcon />}
+                                        label="Download Resume"/>
+                                </a>
+                            </Grid2>
+{/* add 'A little about me section; aperture icon gets moved to the bottom and 'photography' is removed?*/}
+                            <Grid2 size={12}>
+                                <Typography>Photography</Typography>
+                                <NavLink
+                                    to = {`/photography`}
+                                    className={"link"}>
+                                    <CameraIcon />
+                                </NavLink>
+                            </Grid2>
+                        </Grid2>
                     </Item>
                 </Grid2>
             </Grid2>    
