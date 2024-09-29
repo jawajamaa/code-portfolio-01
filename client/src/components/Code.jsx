@@ -4,7 +4,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 import IconLabelButton from "./styleNavMui/IconLabelButton";
 import resume from "../../public/documents/Ryon-Timothy_Resume.pdf";
 
-// rename or remake section to 'A little more about me'.  Keep the resume download, but perhaps put a little more fun information here, and keep the splash/home page short and succinct and more 'professional'? And can add the quad-tich fun photos?  Maybe move the aperture logo and link here?  Again, keeping the splash page simple and extras here for anyone who takes the extra time to look further.
+// rename or remake section to 'A little more about me'.  Keep the resume download, but perhaps put a little more fun information here, and keep the splash/home page short and succinct and more 'professional'? And can add the quad-tich fun photos?  Maybe move the aperture logo and link here?  Again, keeping the splash page simple and extras here for anyone who takes the extra time to look further. and add the link to my 30 sec About me video for 'anyone who prefers to watch instead of read'
 function Code() {
     
     return(

@@ -12,6 +12,7 @@ import { styled } from "@mui/material/styles";
 import IconLabelButton from "./styleNavMui/IconLabelButton";
 import bwHeadshot from "../../public/images/20240806_Ryon-Timothy_312_bw-sm.jpg";
 import resume from "../../public/documents/Ryon-Timothy_Resume.pdf";
+// import recipeLoom from "https://www.loom.com/share/3cf3dfe01113441d84f1821c8fb55403?sid=3f45dd20-c473-4d7c-8fda-2bab15a2b4c6";
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: "#6a716a",
@@ -25,7 +26,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function Home(){
-    const { myGhUrl, myLinkedIn } = useUrl();
+    const { myGhUrl, myLinkedIn, myDigiWallpaperLoom, myRecipeLoom } = useUrl();
     
 
     return(
@@ -80,6 +81,19 @@ function Home(){
                                     </Typography>
                                 </NavLink>
                             </Grid2>
+                            <Grid2>
+                                <a href={myRecipeLoom} target="_blank">
+                                    Recipe Project
+                                </a>
+                                <Typography>React.js | JSON</Typography>
+                            </Grid2>
+                            <Grid2>
+                                <a href={myDigiWallpaperLoom} target="_blank">
+                                    Digi Wallpaper App
+                                </a>
+                                <Typography>Python | Flask | React.js</Typography>
+                            </Grid2>
+{/* Grid element here shows the two loom walkthroughs of my projects */}
                             <Grid2 size={12}>
                                 <a href={resume} download="Ryon-Timothy_Resume">
                                     <IconLabelButton 
