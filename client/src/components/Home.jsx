@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useUrl } from "../providers/UrlContext";
 
-import { Box, Grid2, Paper, Typography } from "@mui/material";
+import { Box, Grid, Grid2, Paper, Typography } from "@mui/material";
 import CameraIcon from "@mui/icons-material/Camera";
 import DownloadIcon from '@mui/icons-material/Download';
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -68,11 +68,14 @@ function Home(){
                 </Grid2>
                 <Grid2 size={6}>
                     <Item>
-                        <Grid2                                 
-                            display="flex" 
-                            alignIems="flex-end"
-                            container spacing={6}>
-                            <Grid2 size={12}>
+                        <Grid2
+                            direction="column"                                 
+                            container spacing={0}
+                        >
+                            <Grid2 size={12}
+                                direction="column"
+                                justify="center"
+                            >
 {/* '01100011 01101111 01100100 01100101' is replaced with 'A little more about me' which takes you to the page fka 'Code' */}
                                 <NavLink to={`/code`}>
                                     <Typography
@@ -81,20 +84,40 @@ function Home(){
                                     </Typography>
                                 </NavLink>
                             </Grid2>
-                            <Grid2>
+                            <Grid2 size={12}
+                                direction="column"
+                                alignItems="flex-end"
+                                justify="flex-start"
+                            >
                                 <a href={myRecipeLoom} target="_blank">
-                                    Recipe Project
+                                    <h3>Recipe Collection</h3>
                                 </a>
+                            </Grid2>
+                            <Grid2 size={12}
+                               direction="column"
+                               justify="center"
+                            >
                                 <Typography>React.js | JSON</Typography>
                             </Grid2>
-                            <Grid2>
+                            <Grid2 size={12}
+                                style={{ display: "flex", alignIems: "flex-end", justifyContent: "center" }}
+                            >
                                 <a href={myDigiWallpaperLoom} target="_blank">
-                                    Digi Wallpaper App
+                                    <h3>Digi Wallpaper App</h3>
                                 </a>
+                            </Grid2>
+                            <Grid2 size={12}
+                                style={{ display: "flex", alignIems: "flex-start", justifyContent: "center" }}
+                            >
                                 <Typography>Python | Flask | React.js</Typography>
                             </Grid2>
 {/* Grid element here shows the two loom walkthroughs of my projects */}
-                            <Grid2 size={12}>
+                            <Grid2 size={12}
+                                // direction="column"
+                                // alignItems="flex-end"
+                                // justify="flex-start"
+
+                            >
                                 <a href={resume} download="Ryon-Timothy_Resume">
                                     <IconLabelButton 
                                         icon={<DownloadIcon />}
