@@ -24,6 +24,76 @@ def seed_data():
     image_list.append(image1)
 
     image2 = Image(
+        title = "Lille 26",
+        location = "Lille, France",
+        year = 2013,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/20130418_Lille_26c.jpg",
+    )
+    image_list.append(image2)
+
+    image3 = Image(
+        title = "Lille 42",
+        location = "Lille, France",
+        year = 2013,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/20130418_Lille_042.jpg",
+    )
+    image_list.append(image3)
+
+    image4 = Image(
+        title = "Istanbul 003",
+        location = "Istanbul, Turkey",
+        year = 2013,
+        gallery = "From-the-Hip",
+        horizontal = False,
+        path = "/images/20130419_Istanbul_003.jpg",
+    )
+    image_list.append(image4)
+
+    image5 = Image(
+        title = "Istanbul 070",
+        location = "Istanbul, Turkey",
+        year = 2013,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/20130419_Istanbul_070.jpg",
+    )
+    image_list.append(image5)
+
+    image6 = Image(
+        title = "Istanbul 038",
+        location = "Istanbul, Turkey",
+        year = 2013,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/20130420_Istanbul_0038.jpg",
+    )
+    image_list.append(image6)
+
+    image7 = Image(
+        title = "Istanbul 117",
+        location = "Istanbul, Turkey",
+        year = 2013,
+        gallery = "From-the-Hip",
+        horizontal = False,
+        path = "/images/20130420_Istanbul_117_nc.jpg",
+    )
+    image_list.append(image7)
+
+    image8 = Image(
+        title = "IAD 003",
+        location = "Washington, D.C, USA",
+        year = 2013,
+        gallery = "Airport",
+        horizontal = False,
+        path = "/images/20131019_IAD_003.jpg",
+    )
+    image_list.append(image8)
+
+    image9 = Image(
         title = "Dune du Pilat 682",
         location = "Dune du Pilat, France",
         year = 2013,
@@ -31,169 +101,9 @@ def seed_data():
         horizontal = False,
         path = "/images/20140920_Dune_du_Pilat_682.jpg",
     )
-    image_list.append(image2)
-
-    image3 = Image(
-        title = "Elephant",
-        location = "Cochin, Carola, India",
-        year = 2010,
-        gallery = "Place",
-        horizontal = False,
-        path = "/images/Cochin_Elephant_104.jpg",
-    )
-    image_list.append(image3)
-
-    image4 = Image(
-        title = "Lake Havasu",
-        location = "Lake Havasu, AZ, USA",
-        year = 2001,
-        gallery = "Place",
-        horizontal = False,
-        path = "/images/LakeHavasu1.5.jpg",
-    )
-    image_list.append(image4)
-
-    image5 = Image(
-        title = "Windmills 40",
-        location = "Palm Springs, CA, USA",
-        year = 2009,
-        gallery = "Place",
-        horizontal = False,
-        path = "/images/windmills_040.jpg",
-    )
-    image_list.append(image5)
-
-    image6 = Image(
-        title = "Wall 209",
-        location = "Paris, France",
-        year = 2011,
-        gallery = "Space",
-        horizontal = False,
-        path = "/images/Paris_209.jpg",
-    )
-    image_list.append(image6)
-
-    image7 = Image(
-        title = "Dam 10",
-        location = "Boise, ID, USA",
-        year = 2009,
-        gallery = "Place",
-        horizontal = False,
-        path = "/images/Boise_010.jpg",
-    )
-    image_list.append(image7)
-
-    image8 = Image(
-        title = "Brooklyn Navy Yard 070",
-        location = "Brooklyn, NY, USA",
-        year = 2008,
-        gallery = "Space",
-        horizontal = False,
-        path = "/images/brooklyn_naval_yard070.jpg",
-    )
-    image_list.append(image8)
-
-    image9 = Image(
-        title = "Joshua Tree 092",
-        location = "Joshua Tree NP, CA, USA",
-        year = 2009,
-        gallery = "Place",
-        horizontal = False,
-        path = "/images/joshua_tree_092.jpg",
-    )
     image_list.append(image9)
 
     image10 = Image(
-        title = "Menara KL Tower 081",
-        location = "Kuala Lumpur, Malaysia",
-        year = 2008,
-        gallery = "Place",
-        horizontal = False,
-        path = "/images/kuala_lumpur_081.jpg",
-    )
-    image_list.append(image10)
-
-    image11 = Image(
-        title = "Menara KL Tower 137",
-        location = "Kuala Lumpur, Malaysia",
-        year = 2008,
-        gallery = "Place",
-        horizontal = False,
-        path = "/images/kuala_lumpur_137.jpg",
-    )
-    image_list.append(image11)
-
-    image12 = Image(
-        title = "Vending",
-        location = "Rochester, NY, USA",
-        year = 2006,
-        gallery = "Space",
-        horizontal = False,
-        path = "/images/vending1_2.jpg",
-    )
-    image_list.append(image12)
-
-    image13 = Image(
-        title = "Westminster Arches 1.1",
-        location = "Westminster, London, UK",
-        year = 2008,
-        gallery = "Place",
-        horizontal = False,
-        path = "/images/westminster_arches1-1.jpg",
-    )
-    image_list.append(image13)
-
-    image14 = Image(
-        title = "Golden Circle 296",
-        location = "Iceland",
-        year = 2014,
-        gallery = "Place",
-        horizontal = False,
-        path = "/images/Golden_Circle_296.jpg",
-    )
-    image_list.append(image14)
-
-    image15 = Image(
-        title = "White Chair 1c",
-        location = "Westminster, London, UK",
-        year = 2008,
-        gallery = "Space",
-        horizontal = False,
-        path = "/images/white_chair1c.jpg",
-    )
-    image_list.append(image15)
-
-    image16 = Image(
-        title = "Macau 080",
-        location = "Macau, SAR of PRC",
-        year = 2008,
-        gallery = "Place",
-        horizontal = False,
-        path = "/images/macau_080.jpg",
-    )
-    image_list.append(image16)
-
-    image17 = Image(
-        title = "Kuala Lumpur 101",
-        location = "Kuala Lumpur, Malaysia",
-        year = 2008,
-        gallery = "Place",
-        horizontal = False,
-        path = "/images/kuala_lumpur_101_crop_symtcl.jpg",
-    )
-    image_list.append(image17)
-
-    image18 = Image(
-        title = "Golden Circle 210",
-        location = "Iceland",
-        year = 2014,
-        gallery = "Place",
-        horizontal = False,
-        path = "/images/Golden_Circle_210.jpg",
-    )
-    image_list.append(image18)
-
-    image19 = Image(
         title = "Agra 141",
         location = "Agra, Uttar Pradesh, India",
         year = 2010,
@@ -201,17 +111,207 @@ def seed_data():
         horizontal = False,
         path = "/images/Agra_141.jpg",
     )
-    image_list.append(image19)
+    image_list.append(image10)
 
-    image20 = Image(
-        title = "Petronas Towers",
+    image11 = Image(
+        title = "Boise 010",
+        location = "Boise, Idaho, USA",
+        year = 2009,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/Boise_010.jpg",
+    )
+    image_list.append(image11)
+
+    image12 = Image(
+        title = "Brooklyn Naval Yard 070",
+        location = "Brooklyn, NY, USA",
+        year = 2008,
+        gallery = "Space",
+        horizontal = False,
+        path = "/images/brooklyn_naval_yard070.jpg",
+    )
+    image_list.append(image12)
+
+    image13 = Image(
+        title = "Elephant",
+        location = "Cochin, Carola, India",
+        year = 2010,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/Cochin_Elephant_104.jpg",
+    )
+    image_list.append(image13)
+
+    image14 = Image(
+        title = "Iceland 210",
+        location = "Golden Circle, Iceland",
+        year = 2014,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/Golden_Circle_210.jpg",
+    )
+    image_list.append(image14)
+
+    image15 = Image(
+        title = "Gullfoss 296",
+        location = "Golden Circle, Iceland",
+        year = 2014,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/Golden_Circle_296.jpg",
+    )
+    image_list.append(image15)
+
+    image16 = Image(
+        title = "Gullfoss 303",
+        location = "Golden Circle, Iceland",
+        year = 2014,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/Golden_Circle_303.jpg",
+    )
+    image_list.append(image16)
+
+    image17 = Image(
+        title = "Joshua Tree",
+        location = "Joshua Tree N.P, CA, USA",
+        year = 2009,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/joshua_tree_092.jpg",
+    )
+    image_list.append(image17)
+
+    image18 = Image(
+        title = "Petronas Twin Towers",
         location = "Kuala Lumpur, Malaysia",
         year = 2008,
-        gallery = "Place",
+        gallery = "Space",
         horizontal = False,
         path = "/images/kuala_lumpur_075.jpg",
     )
+    image_list.append(image18)
+
+    image19 = Image(
+        title = "Menara Kuala Lumpur",
+        location = "Kuala Lumpur, Malaysia",
+        year = 2008,
+        gallery = "Space",
+        horizontal = False,
+        path = "/images/kuala_lumpur_081.jpg",
+    )
+    image_list.append(image19)
+
+    image20 = Image(
+        title = "Kuala Lumpur High Rise",
+        location = "Kuala Lumpur, Malaysia",
+        year = 2008,
+        gallery = "Space",
+        horizontal = False,
+        path = "/images/kuala_lumpur_101_crop_symtcl.jpg",
+    )
     image_list.append(image20)
+
+    image21 = Image(
+        title = "Menara Kuala Lumpur",
+        location = "Kuala Lumpur, Malaysia",
+        year = 2008,
+        gallery = "Space",
+        horizontal = False,
+        path = "/images/kuala_lumpur_137.jpg",
+    )
+    image_list.append(image21)
+
+    image22 = Image(
+        title = "Lake Havasu",
+        location = "Lake Havasu, AZ, USA",
+        year = 2001,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/LakeHavasu1.5.jpg",
+    )
+    image_list.append(image22)
+
+    image23 = Image(
+        title = "Macau 080",
+        location = "Macau, PRC",
+        year = 2008,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/macau_080.jpg",
+    )
+    image_list.append(image23)
+
+    image24 = Image(
+        title = "Wall 209",
+        location = "Paris, France",
+        year = 2011,
+        gallery = "Space",
+        horizontal = False,
+        path = "/images/Paris_209.jpg",
+    )
+    image_list.append(image24)
+
+    image25 = Image(
+        title = "Vending",
+        location = "Rochester, NY, USA",
+        year = 2006,
+        gallery = "Space",
+        horizontal = False,
+        path = "/images/vending1_2.jpg",
+    )
+    image_list.append(image25)
+
+    image26 = Image(
+        title = "Westminster Arches 1.1",
+        location = "Westminster, London, UK",
+        year = 2008,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/westminster_arches1-1.jpg",
+    )
+    image_list.append(image26)
+
+    image27 = Image(
+        title = "White Chair 1c",
+        location = "Westminster, London, UK",
+        year = 2008,
+        gallery = "Space",
+        horizontal = False,
+        path = "/images/white_chair1c.jpg",
+    )
+    image_list.append(image27)
+
+    image28 = Image(
+        title = "Windmills 40",
+        location = "Palm Springs, CA, USA",
+        year = 2009,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/windmills_040.jpg",
+    )
+    image_list.append(image28)
+
+    image29 = Image(
+        title = "Winterthur 028",
+        location = "Winterthur, Switzerland",
+        year = 2013,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/Winterthur_028_1.jpg",
+    )
+    image_list.append(image29)
+
+    image30 = Image(
+        title = "Winterthur 049",
+        location = "Winterthur, Switzerland",
+        year = 2013,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/Winterthur_049.jpg",
+    )
+    image_list.append(image30)
 
 
 # seed horizontal images 
