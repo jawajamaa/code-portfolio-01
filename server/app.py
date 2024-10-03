@@ -36,12 +36,10 @@ api.add_resource(CodeFiles, '/codefiles')
 class ImageFiles(Resource):
 
     def get(self):
-        response_dict = {
-            "message" : "tim ryon's image files" 
-        }
+        image_response = [img.to_dict() for img in Image.query.all()]
 
         return make_response(
-            response_dict,
+            image_response,
             200
         )
     

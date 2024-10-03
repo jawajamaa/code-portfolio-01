@@ -5,6 +5,7 @@ import { Container } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 // import { darkTheme } from "../AppTheme";
 // import { darkTheme, fontTheme } from "../AppTheme";
+import { ImagesProvider } from "../providers/ImageContext";
 import { UrlProvider } from "../providers/UrlContext";
 
 // import Home from './Home';
@@ -55,20 +56,22 @@ function App() {
     <ThemeProvider theme={darkTheme}>
       {/* <ThemeProvider theme={combinedTheme}> */}
       <UrlProvider>
-        <Container>
-          <header>
-            <RenderAppBarOrNot>
-              <ResponsiveAppBar 
-                  toggleDarkMode = { toggleDarkMode }
-                  toggleDarkTheme = { toggleDarkTheme }
-                />
-            </RenderAppBarOrNot>
-          </header>
-          <main>
-            <Outlet />
-            <CssBaseline />
-          </main>
-        </Container>
+        <ImagesProvider>
+          <Container>
+            <header>
+              <RenderAppBarOrNot>
+                <ResponsiveAppBar 
+                    toggleDarkMode = { toggleDarkMode }
+                    toggleDarkTheme = { toggleDarkTheme }
+                  />
+              </RenderAppBarOrNot>
+            </header>
+            <main>
+              <Outlet />
+              <CssBaseline />
+            </main>
+          </Container>
+        </ImagesProvider>
       </UrlProvider>
     </ThemeProvider>
   );

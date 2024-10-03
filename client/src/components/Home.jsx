@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useUrl } from "../providers/UrlContext";
 
-import { Box, Grid, Grid2, Paper, Typography } from "@mui/material";
+import { Box, Grid2, Paper, Typography } from "@mui/material";
 import CameraIcon from "@mui/icons-material/Camera";
 import DownloadIcon from '@mui/icons-material/Download';
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -100,14 +100,14 @@ function Home(){
                                 <Typography>React.js | JSON</Typography>
                             </Grid2>
                             <Grid2 size={12}
-                                style={{ display: "flex", alignIems: "flex-end", justifyContent: "center" }}
+                                style={{ display: "flex", alignItems: "flex-end", justifyContent: "center" }}
                             >
                                 <a href={myDigiWallpaperLoom} target="_blank">
                                     <h3>Digi Wallpaper App</h3>
                                 </a>
                             </Grid2>
                             <Grid2 size={12}
-                                style={{ display: "flex", alignIems: "flex-start", justifyContent: "center" }}
+                                style={{ display: "flex", alignItems: "flex-start", justifyContent: "center" }}
                             >
                                 <Typography>Python | Flask | React.js</Typography>
                             </Grid2>
@@ -127,7 +127,7 @@ function Home(){
 {/* add 'A little about me section; aperture icon gets moved to the bottom and 'photography' is removed?*/}
                             <Grid2 
                                 display="flex" 
-                                alignIems="flex-end" 
+                                alignItems="flex-end" 
                                 justify="flex-end" 
                                 size={12} 
                                 offset={{ md: 10 }}
