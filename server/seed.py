@@ -6,8 +6,12 @@ from models import db, Image
 
 def seed_data():
 
-    print("Deleting all previous data...")
-    Image.query.delete()
+    # print("Deleting all previous data...")
+    try:
+        Image.query.delete()
+        print("Existing data deleted.")
+    except Exception as e:
+        print(f"Error deleting data: {e}")
 
 # seed mobile wallpaper 
     print("adding Images...")
@@ -796,13 +800,20 @@ def seed_data():
     )
     image_list.append(imageH48)
 
+    # print(image_list)
 
-    db.session.add_all(image_list)
+    try:
+        db.session.add_all(image_list)
+        db.session.commit()
+        print(f"Successfuly added {len(image_list)} images to the database")
+    except Exception as e:
+        print(f"Error adding images: {e}")
+        db.session.rollback()
 
-    db.session.commit()
-    print("Db seed complete - now it's entirely up to you!!")
+    
+    # print("Db seed complete - now it's entirely up to you!!")
 
-    if __name__ == '__main__':
-        with app.app_context():
-            print("Starting seed process...")
-            seed_data()
+if __name__ == '__main__':
+    with app.app_context():
+        print("Starting seed process...")
+        seed_data()
