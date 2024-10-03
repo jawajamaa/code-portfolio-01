@@ -798,3 +798,11 @@ def seed_data():
 
 
     db.session.add_all(image_list)
+
+    db.session.commit()
+    print("Db seed complete - now it's entirely up to you!!")
+
+    if __name__ == '__main__':
+        with app.app_context():
+            print("Starting seed process...")
+            seed_data()
