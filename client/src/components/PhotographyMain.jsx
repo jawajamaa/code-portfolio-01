@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 
 import { useImages } from "../providers/ImageContext";
 
@@ -10,9 +10,17 @@ function PhotographyMain(){
     console.log(images);
 
     return(
-        <Typography>
-            Photography Main 1979
-        </Typography>
+        <Box sx={{ flexGrow:1 }}>
+            {randomImage && (
+                <Container>
+                    <img
+                        src = { randomImage.path }
+                        alt = { randomImage.title }
+                        width = "750"
+                    />
+                </Container>
+            )}
+        </Box>
     )
 };
 
