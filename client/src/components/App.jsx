@@ -55,9 +55,12 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       {/* <ThemeProvider theme={combinedTheme}> */}
-      <UrlProvider>
-        <ImagesProvider>
-          <Container>
+      <Container
+        maxWidth="false"
+        disableGutters="true"
+      >
+        <UrlProvider>
+          <ImagesProvider>
             <header>
               <RenderAppBarOrNot>
                 <ResponsiveAppBar 
@@ -70,9 +73,9 @@ function App() {
               <Outlet />
               <CssBaseline />
             </main>
-          </Container>
-        </ImagesProvider>
-      </UrlProvider>
+          </ImagesProvider>
+        </UrlProvider>
+      </Container>
     </ThemeProvider>
   );
 }

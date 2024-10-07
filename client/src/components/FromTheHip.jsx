@@ -1,11 +1,30 @@
 import React from "react";
-import { Typography } from "@mui/material";
+import { Box, ImageList, Typography } from "@mui/material";
+
+import ImgCard from "./ImgCard";
+import { useImages } from "../providers/ImageContext";
 
 function FromTheHip() {
+    const { images } = useImages();
+
     return(
-        <>
-            <Typography>FromTheHip</Typography>
-        </>
+        <Box sx={{ ml:-15, width: 1500, height: 750}}>
+            <ImageList variant="masonry" cols={4} gap={8}>
+                {
+                    images?.map(img =>(
+                        img.gallery === "From-the-Hip" ?
+                            <ImgCard
+                                key = { img.id }
+                                id = { img.id }
+                                title = { img.title }
+                                location = { img.location }
+                                year = { img.year }
+                                path = { img.path }
+                            /> : null
+                    ))
+                }
+            </ImageList>
+        </Box>
     )
 };
 

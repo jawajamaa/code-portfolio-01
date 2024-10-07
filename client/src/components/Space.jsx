@@ -6,10 +6,10 @@ import { useImages } from "../providers/ImageContext";
 
 
 function Space(){
-    const { images, setImages } = useImages();
+    const { images } = useImages();
 
     return(
-        <Box sx={{ ml:10, width: 1500, height: 750}}>
+        <Box sx={{ ml:-15, width: 1500, height: 750}}>
             <ImageList variant="masonry" cols={4} gap={8}>
                 {
                     images?.map(img =>(
