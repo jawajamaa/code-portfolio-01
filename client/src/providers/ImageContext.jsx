@@ -9,31 +9,20 @@ export function ImagesProvider({ children }) {
     const [images, setImages] = useState([]);
     const [randomImage, setRandomImage] = useState(null);
 
-    console.log(baseUrl);
-    console.log(imageUrl);
-    console.log(images);
-
-    const randomIdx = () => {
-        return Math.floor(Math.random() * data.length)
-    }
-    // function randomIdx() {
-    //     return Math.floor(Math.random() * data.length)
-    // }
 
     useEffect(()=>{
         fetch(`${baseUrl + imageUrl}`)
             .then(r => r.json())
             .then(data => {
                 setImages(data);
-                // const randomIdx = Math.floor(Math.random() * data.length);
-                setRandomImage(data[randomIdx]);
-                if (randomImage.horizontal && randomImage.horizontal !== true){
+                const randomIdx = Math.floor(Math.random() * data.length);
+                if ((data[randomIdx])?.horizontal === true){
                     setRandomImage(data[randomIdx]);
                 }
             });
     }, []);
 
-    console.log(randomImage);
+    console.log(randomImage?.horizontal);
 
     return(
         <ImagesContext.Provider value = {{ images, setImages, randomImage, setRandomImage }}>

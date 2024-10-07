@@ -56,8 +56,8 @@ function App() {
     <ThemeProvider theme={darkTheme}>
       {/* <ThemeProvider theme={combinedTheme}> */}
       <Container
-        maxWidth="false"
-        disableGutters="true"
+        maxWidth={false}
+        disableGutters={true}
       >
         <UrlProvider>
           <ImagesProvider>
