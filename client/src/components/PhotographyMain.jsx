@@ -10,9 +10,6 @@ function PhotographyMain(){
     console.log(images);
 
 
-/////////////////////////////////////////////////////////////////////////////
-// first run Digi Wallpaper App and try to remove scrollbar but retain scroll function, then import <ImageList> from mui, set up and see if can remove scroll bars 
-
     return(
         <Box sx={{ flexGrow:1 }}>
             {randomImage && (

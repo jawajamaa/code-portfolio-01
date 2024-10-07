@@ -1,12 +1,16 @@
+import { ImageListItem } from "@mui/material";
+
 // can use for any gallery, but will both vert and horiz work or do I need separate V and H imgCards?
 
-
-function ImgCard() {
+function ImgCard({ id, title, location, year, path}) {
 
     return(
-        <>
-            <h3>This is the Image Card </h3>
-        </>
+        <ImageListItem key = { id }>
+            <img
+                src = { path }
+                alt = { title }
+            />
+        </ImageListItem>
     );
 }
 
