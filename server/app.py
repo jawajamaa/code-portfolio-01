@@ -37,11 +37,9 @@ class ImageFiles(Resource):
 
     def get(self):
         image_response = [img.to_dict() for img in Image.query.all()]
-
-        return make_response(
-            image_response,
-            200
-        )
+        response = make_response(image_response, 200)
+        response.headers.add("Access-Control-Allow-Origin", "*")
+        return response
     
 api.add_resource(ImageFiles, '/imagefiles')
 

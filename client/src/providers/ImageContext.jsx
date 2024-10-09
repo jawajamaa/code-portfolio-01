@@ -15,10 +15,15 @@ export function ImagesProvider({ children }) {
             .then(r => r.json())
             .then(data => {
                 setImages(data);
-                const randomIdx = Math.floor(Math.random() * data.length);
-                if ((data[randomIdx])?.horizontal === true){
-                    setRandomImage(data[randomIdx]);
-                }
+                // const randomIdx = Math.floor(Math.random() * data.length);
+                const randomIdxFunc = () => {
+                    const randomIdx = (Math.floor(Math.random() * data.length));
+                    if ((data[randomIdx])?.horizontal === true){
+                        setRandomImage(data[randomIdx]);
+                    } else {
+                        randomIdxFunc();
+                    }
+                } 
             });
     }, []);
 
