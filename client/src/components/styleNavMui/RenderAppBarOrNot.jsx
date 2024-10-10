@@ -7,7 +7,7 @@ function RenderAppBarOrNot({ children }) {
 
     useEffect(() => {
         console.log("This is location", location)
-        if(location.pathname === "/" || location.pathname === "/code"){
+        if(location.pathname === "/" || location.pathname === "/aboutme"){
             setNoAppBar(false)
         } else {
             setNoAppBar(true)

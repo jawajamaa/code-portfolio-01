@@ -77,11 +77,15 @@ function Home(){
                                 justify="center"
                             >
 {/* '01100011 01101111 01100100 01100101' is replaced with 'A little more about me' which takes you to the page fka 'Code' */}
-                                <NavLink to={`/code`}>
+                                <NavLink to={`/aboutme`}>
                                     <Typography
                                         className={"link"}>
-                                            01100011 01101111 01100100 01100101 
+                                            01000001 00100000 01001100 01101001 01110100 01110100 01101100 01100101 00100000 01101101 01101111 01110010 01100101 00100000 01100001 01100010 01101111 01110101 01110100 00100000 01101101 01100101 00100001  
                                     </Typography>
+                                    {/* <Typography
+                                        className={"link"}>
+                                            01100011 01101111 01100100 01100101 
+                                    </Typography> */}
                                 </NavLink>
                             </Grid2>
                             <Grid2 size={12}
