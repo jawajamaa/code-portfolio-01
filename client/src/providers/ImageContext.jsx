@@ -13,19 +13,21 @@ export function ImagesProvider({ children }) {
     useEffect(()=>{
         fetch(`${baseUrl + imageUrl}`)
             .then(r => r.json())
-            .then(data => {
-                setImages(data);
-                // const randomIdx = Math.floor(Math.random() * data.length);
+            .then(ImagesData => {
+                setImages(ImagesData);
+                
                 const randomIdxFunc = () => {
-                    const randomIdx = (Math.floor(Math.random() * data.length));
-                    if ((data[randomIdx])?.horizontal === true){
-                        setRandomImage(data[randomIdx]);
+                    if (ImagesData.length === 0) return;
+                    const randomIdx = (Math.floor(Math.random() * ImagesData.length));
+                    if ((ImagesData[randomIdx])?.horizontal === true){
+                        setRandomImage(ImagesData[randomIdx]);
                     } else {
                         randomIdxFunc();
                     }
-                } 
+                };
+                randomIdxFunc();
             });
-    }, []);
+    }, [baseUrl, imageUrl]);
 
     console.log(randomImage?.horizontal);
 
