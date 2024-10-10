@@ -17,7 +17,7 @@ function PhotographyMain(){
                     <img
                         src = { randomImage.path }
                         alt = { randomImage.title }
-                        width = "750"
+                        width = "1150"
                     />
                 </Container>
             )}
