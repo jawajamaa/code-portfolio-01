@@ -1,6 +1,7 @@
 import { Box, Grid2, Typography } from "@mui/material";
 import DownloadIcon from '@mui/icons-material/Download';
 
+import BannerMe from "./BannerMe";
 import IconLabelButton from "./styleNavMui/IconLabelButton";
 import resume from "../../public/documents/Ryon-Timothy_Resume.pdf";
 
@@ -10,6 +11,7 @@ function AboutMe() {
     return(
         <Box sx={{ flexGrow:1 }}>
             <Grid2 container spacing={2}>
+                <BannerMe />
                 <Grid2 size={12}>
                     <Typography>01100011 01101111 01100100 01100101 </Typography>
                 </Grid2>

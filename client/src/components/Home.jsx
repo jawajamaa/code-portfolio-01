@@ -2,37 +2,40 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useUrl } from "../providers/UrlContext";
 
-import { Box, Grid2, Paper, Typography } from "@mui/material";
+import { Box, Grid2, Typography } from "@mui/material";
 import CameraIcon from "@mui/icons-material/Camera";
 import DownloadIcon from '@mui/icons-material/Download';
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { styled } from "@mui/material/styles";
+// import GitHubIcon from "@mui/icons-material/GitHub";
+// import LinkedInIcon from "@mui/icons-material/LinkedIn";
+// import { styled } from "@mui/material/styles";
 
+import BannerMe from "./BannerMe";
 import IconLabelButton from "./styleNavMui/IconLabelButton";
 import bwHeadshot from "../../public/images/20240806_Ryon-Timothy_312_bw-sm.jpg";
 import resume from "../../public/documents/Ryon-Timothy_Resume.pdf";
+import Item from "./Item";
 // import recipeLoom from "https://www.loom.com/share/3cf3dfe01113441d84f1821c8fb55403?sid=3f45dd20-c473-4d7c-8fda-2bab15a2b4c6";
 
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: "#6a716a",
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-    ...theme.applyStyles("dark", {
-        backgroundColor: "dark",
-    }),
-}));
+// const Item = styled(Paper)(({ theme }) => ({
+//     backgroundColor: "#6a716a",
+//     ...theme.typography.body2,
+//     padding: theme.spacing(1),
+//     textAlign: "center",
+//     color: theme.palette.text.secondary,
+//     ...theme.applyStyles("dark", {
+//         backgroundColor: "dark",
+//     }),
+// }));
 
 function Home(){
-    const { myGhUrl, myLinkedIn, myDigiWallpaperLoom, myRecipeLoom } = useUrl();
+    const { myDigiWallpaperLoom, myRecipeLoom } = useUrl();
     
 
     return(
         <Box sx={{ flexGrow:1 }}>
             <Grid2 container spacing={2}>
-                <Grid2 size={12}>
+                <BannerMe />
+                {/* <Grid2 size={12}>
                     <Item>
                         <Grid2 
                             container spacing={2}
@@ -59,7 +62,7 @@ function Home(){
                             </Grid2>
                         </Grid2>
                     </Item>
-                </Grid2>
+                </Grid2> */}
                 <Grid2 size={6}>
                     <Item>
                         <img src = {bwHeadshot} 
