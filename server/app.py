@@ -1,3 +1,4 @@
+from docx import Document
 from flask import make_response
 from flask_restful import Resource
 
@@ -22,9 +23,11 @@ api.add_resource(Home, '/')
 class AboutMeFiles(Resource):
 
     def get(self):
-        response_dict = {
-            "message" : "tim ryon's About Me files"
-        }
+        meDoc = Document("../client/public/documents/20241010_A-Little-About-Me.docx")
+        full_text = []
+        for para in meDoc.paragraphs:
+            full_text.append(para.text)
+        response_dict = '\n\n'.join(full_text)
 
         return make_response(
             response_dict,
