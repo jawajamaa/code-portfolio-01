@@ -26,8 +26,10 @@ class AboutMeFiles(Resource):
         meDoc = Document("../client/public/documents/20241010_A-Little-About-Me.docx")
         full_text = []
         for para in meDoc.paragraphs:
-            full_text.append(para.text)
+            full_text.append('  ' + para.text)
         response_dict = '\n\n'.join(full_text)
+# getting error that text when receiveing the fetch is not 'valid Json' - due to it not being an array of objects most likely?  refactor code here to return a list of dictionaries where each paragraph is another dictionary within the main list, thereby making it valid json?  ie. [{para1: "lorem ipsum"}, {para2: "lorem ipsum"}] etc.
+
 
         return make_response(
             response_dict,
