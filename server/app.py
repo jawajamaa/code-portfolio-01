@@ -19,11 +19,11 @@ class Home(Resource):
     
 api.add_resource(Home, '/')
 
-class CodeFiles(Resource):
+class AboutMeFiles(Resource):
 
     def get(self):
         response_dict = {
-            "message" : "tim ryon's code files"
+            "message" : "tim ryon's About Me files"
         }
 
         return make_response(
@@ -31,7 +31,7 @@ class CodeFiles(Resource):
             200
         )
     
-api.add_resource(CodeFiles, '/codefiles')
+api.add_resource(AboutMeFiles, '/aboutmefiles')
 
 class ImageFiles(Resource):
 

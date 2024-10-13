@@ -16,17 +16,6 @@ import resume from "../../public/documents/Ryon-Timothy_Resume.pdf";
 import Item from "./Item";
 // import recipeLoom from "https://www.loom.com/share/3cf3dfe01113441d84f1821c8fb55403?sid=3f45dd20-c473-4d7c-8fda-2bab15a2b4c6";
 
-// const Item = styled(Paper)(({ theme }) => ({
-//     backgroundColor: "#6a716a",
-//     ...theme.typography.body2,
-//     padding: theme.spacing(1),
-//     textAlign: "center",
-//     color: theme.palette.text.secondary,
-//     ...theme.applyStyles("dark", {
-//         backgroundColor: "dark",
-//     }),
-// }));
-
 function Home(){
     const { myDigiWallpaperLoom, myRecipeLoom } = useUrl();
     
@@ -35,34 +24,6 @@ function Home(){
         <Box sx={{ flexGrow:1 }}>
             <Grid2 container spacing={2}>
                 <BannerMe />
-                {/* <Grid2 size={12}>
-                    <Item>
-                        <Grid2 
-                            container spacing={2}
-                            display="flex"
-                            alignItems="center"
-                        >
-                            <Grid2 size={{ xs: 6, md: 2 }} offset={{ xs: 3, md: 0 }}>
-                                <a href = { myGhUrl }
-                                    target = "_blank"
-                                    className={"link"}>
-                                <GitHubIcon />
-                                </a>
-                            </Grid2>
-                            <Grid2 size={{ xs: 'grow', md: 4 }} offset={{ md: 2 }}>
-                                <Typography>timothy ryon</Typography>
-                                <Typography>Developer</Typography>
-                            </Grid2>
-                            <Grid2 size={{ xs: 4, md: 2 }} offset={{ md: 'auto' }}>
-                                <a href = { myLinkedIn }
-                                    target = "_blank"
-                                    className = {"link"}>
-                                    <LinkedInIcon />
-                                </a>
-                            </Grid2>
-                        </Grid2>
-                    </Item>
-                </Grid2> */}
                 <Grid2 size={6}>
                     <Item>
                         <img src = {bwHeadshot} 
