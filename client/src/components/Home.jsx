@@ -5,15 +5,14 @@ import { useUrl } from "../providers/UrlContext";
 import { Box, Grid2, Typography } from "@mui/material";
 import CameraIcon from "@mui/icons-material/Camera";
 import DownloadIcon from '@mui/icons-material/Download';
-// import GitHubIcon from "@mui/icons-material/GitHub";
-// import LinkedInIcon from "@mui/icons-material/LinkedIn";
-// import { styled } from "@mui/material/styles";
 
 import BannerMe from "./BannerMe";
 import IconLabelButton from "./styleNavMui/IconLabelButton";
 import bwHeadshot from "../../public/images/20240806_Ryon-Timothy_312_bw-sm.jpg";
 import resume from "../../public/documents/Ryon-Timothy_Resume.pdf";
 import Item from "./Item";
+
+import "./Home.css";
 // import recipeLoom from "https://www.loom.com/share/3cf3dfe01113441d84f1821c8fb55403?sid=3f45dd20-c473-4d7c-8fda-2bab15a2b4c6";
 
 function Home(){

@@ -1,10 +1,12 @@
 import { useUrl } from "../providers/UrlContext";
+import { NavLink } from "react-router-dom";
 
 import { Box, Grid2, Typography } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 import Item from "./Item";
+import "./BannerMe.css";
 
 function BannerMe(){
     const { myGhUrl, myLinkedIn } = useUrl();
@@ -25,8 +27,12 @@ function BannerMe(){
                     </a>
                 </Grid2>
                 <Grid2 size={{ xs: 'grow', md: 4 }} offset={{ md: 2 }}>
-                    <Typography>timothy ryon</Typography>
-                    <Typography>Developer</Typography>
+                    <nav id = "nameLink">
+                        <NavLink to = {'/'}>
+                            <Typography>timothy ryon</Typography>
+                            <Typography>Developer</Typography>
+                        </NavLink>
+                    </nav>
                 </Grid2>
                 <Grid2 size={{ xs: 4, md: 2 }} offset={{ md: 'auto' }}>
                     <a href = { myLinkedIn }

@@ -1,0 +1,18 @@
+#nameLink a.active {
+   color: #fff; 
+   text-decoration: none;
+}
+
+
+/* .link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    color: red;
+  }
+  
+  .link:visited {
+    color: #fff;
+  } */

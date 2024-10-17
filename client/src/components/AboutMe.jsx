@@ -9,6 +9,8 @@ import QuadTych from "../../public/documents/QuadPic_bw02.jpg";
 import resume from "../../public/documents/Ryon-Timothy_Resume.pdf";
 import { useUrl } from "../providers/UrlContext";
 
+import "./AboutMe.css";
+
 // Keep the resume download, but perhaps put a little more fun information here, and keep the splash/home page short and succinct and more 'professional'? And can add the quad-tich fun photos?  Maybe move the aperture logo and link here?  Again, keeping the splash page simple and extras here for anyone who takes the extra time to look further. and add the link to my 30 sec About me video for 'anyone who prefers to watch instead of read'
 function AboutMe() {
     const{ aboutMeUrl, baseUrl } = useUrl();
