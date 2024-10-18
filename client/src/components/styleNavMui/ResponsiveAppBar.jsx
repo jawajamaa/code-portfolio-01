@@ -13,7 +13,7 @@ import Switch from "@mui/material/Switch";
 
 const pages = [
   {name: "Home", url: "/"},
-  {name: "Code", url: "/code"},
+  {name: "About Me", url: "/aboutme"},
   {name: "Photography", url: "/photography"},
   {name: "Space" ,url: "/photography/space"},
   {name: "Place" ,url: "/photography/place"},

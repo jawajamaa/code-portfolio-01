@@ -20,6 +20,8 @@ function AboutMe() {
         fetch(baseUrl + aboutMeUrl)
             .then(r => r.json())
             .then(textData => {
+                console.log("Hi! The second .then is running!!")
+                console.log(textData);
                 setAboutMeText(textData)
             });
     },[aboutMeUrl])

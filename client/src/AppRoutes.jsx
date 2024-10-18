@@ -1,7 +1,7 @@
 import Airport from "./components/Airport";
 import AirportOverlay from "./components/AirportOverlay";
 import App from "./components/App";
-import Code from "./components/AboutMe";
+import AboutMe from "./components/AboutMe";
 import ErrorPage from "./components/ErrorPage";
 import FromTheHip from "./components/FromTheHip";
 import FromTheHipOverlay from "./components/FromTheHipOverlay";
@@ -25,7 +25,7 @@ const routes = [
             },
             {
                 path: "/aboutme",
-                element: <Code />
+                element: <AboutMe />
             },
             {
                 path: "/photography",
