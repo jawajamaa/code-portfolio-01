@@ -21,9 +21,9 @@ class Home(Resource):
 api.add_resource(Home, '/')
 
 class AboutMeFiles(Resource):
-
+# this isn't properly working due to python thinking it is a docx and attempting to parse as such
     def get(self):
-        meDoc = Document("../client/public/documents/20241010_A-Little-About-Me.docx")
+        meDoc = Document("../client/public/documents/20241017_A-Little-About-Me-json-form.json")
         full_text = []
         for para in meDoc.paragraphs:
             full_text.append('  ' + para.text)
