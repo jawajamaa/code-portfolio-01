@@ -1,6 +1,7 @@
-from docx import Document
-from flask import make_response
+# from docx import Document
+from flask import Flask, jsonify, make_response
 from flask_restful import Resource
+from pdfminer.high_level import extract_text
 
 from config import app, db, api
 
@@ -21,20 +22,37 @@ class Home(Resource):
 api.add_resource(Home, '/')
 
 class AboutMeFiles(Resource):
-# this isn't properly working due to python thinking it is a docx and attempting to parse as such
+
     def get(self):
-        meDoc = Document("../client/public/documents/20241017_A-Little-About-Me-json-form.json")
-        full_text = []
-        for para in meDoc.paragraphs:
-            full_text.append('  ' + para.text)
-        response_dict = '\n\n'.join(full_text)
+        with open('../client/public/documents/Ryon-Timothy-A-Little-About-Me.pdf') as aboutMe:
+            print("Line 28 app.py AboutMe text as follows:", aboutMe)
+            # no print statement in cli, so doesn't work? try in cli first?
+            try:
+                aboutMePdfText = extract_text(aboutMe)
+                return jsonify(aboutMePdfText)
+                # return jsonify({'text': aboutMePdfText})
+            except Exception as exc:
+                return jsonify({'error': str(exc)}), 500
+
+
+        # return make_response(
+        #     response_dict,
+        #     200
+        # )
+
+    # def get(self):
+    #     meDoc = Document("../client/public/documents/20241017_A-Little-About-Me-json-form.json")
+    #     full_text = []
+    #     for para in meDoc.paragraphs:
+    #         full_text.append('  ' + para.text)
+    #     response_dict = '\n\n'.join(full_text)
 # getting error that text when receiveing the fetch is not 'valid Json' - due to it not being an array of objects most likely?  refactor code here to return a list of dictionaries where each paragraph is another dictionary within the main list, thereby making it valid json?  ie. [{para1: "lorem ipsum"}, {para2: "lorem ipsum"}] etc.
 
 
-        return make_response(
-            response_dict,
-            200
-        )
+        # return make_response(
+        #     response_dict,
+        #     200
+        # )
     
 api.add_resource(AboutMeFiles, '/aboutmefiles')
 
