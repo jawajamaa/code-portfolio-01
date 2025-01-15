@@ -33,27 +33,47 @@ class AboutMeFiles(Resource):
     def get(self):
         lines = list()
 
-        with open('../client/public/documents/Ryon-Timothy-A-Little-About-Me.pdf') as aboutMe:
-            print("Line 28 app.py AboutMe text as follows:", aboutMe)
+        try:
+            with open('../client/public/documents/Ryon-Timothy-A-Little-About-Me.pdf') as aboutMe:
+                print("Line 28 app.py AboutMe text as follows:", aboutMe)
             # no print statement in cli, so doesn't work? try in cli first?
-            try:
-                resourceMgr = PDFResourceManager()
-                laparams = LAParams()
-                device = PDFPageAggregator(resourceMgr, laparams=laparams)
-                interpreter = PDFPageInterpreter(resourceMgr, device)
-                
-                for page in PDFPage.get_pages(aboutMe):
-                    interpreter.process_page(page)
-                    layout = device.get_result()
 
-                    for element in layout:
-                        if isinstance(element, LTTextBoxHorizontal):
-                            lines.extend(element.get_text().splitlines())
-
-                return lines
+                # return lines
             
-            except Exception as exc:
-                return jsonify({'error': str(exc)}), 500
+        except Exception as exc:
+            print(f"File {aboutMe} cannot be opened")
+            return jsonify({'error': str(exc)}), 500
+# getting ValueError on line 47 - 'I/O operation on closed file'
+        for line in aboutMe:
+            lines.append(line)
+        # text_response =
+        response = make_response(lines, 200)
+        # response = make_response(text_response, 200)
+        response.headers.add("Access-Control-Allow-Origin", "*")
+        return response
+
+# line 59 would start after lines = list(), but doesn't appear to works
+        # with open('../client/public/documents/Ryon-Timothy-A-Little-About-Me.pdf') as aboutMe:
+        #     print("Line 28 app.py AboutMe text as follows:", aboutMe)
+        #     # no print statement in cli, so doesn't work? try in cli first?
+        #     try:
+        #         resourceMgr = PDFResourceManager()
+        #         laparams = LAParams()
+        #         device = PDFPageAggregator(resourceMgr, laparams=laparams)
+        #         interpreter = PDFPageInterpreter(resourceMgr, device)
+                
+        #         for page in PDFPage.get_pages(aboutMe):
+        #             interpreter.process_page(page)
+        #             layout = device.get_result()
+
+        #             for element in layout:
+        #                 if isinstance(element, LTTextBoxHorizontal):
+        #                     lines.extend(element.get_text().splitlines())
+
+        #         return lines
+            
+        #     except Exception as exc:
+        #         return jsonify({'error': str(exc)}), 500
 
 # in place of above try statement
             # try:
