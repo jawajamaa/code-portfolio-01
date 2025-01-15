@@ -29,7 +29,7 @@ export function ImagesProvider({ children }) {
             });
     }, [baseUrl, imageUrl]);
 
-    console.log(randomImage?.horizontal);
+    // console.log(randomImage?.horizontal);
 
     return(
         <ImagesContext.Provider value = {{ images, setImages, randomImage, setRandomImage }}>
