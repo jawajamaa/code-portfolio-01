@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import { Box, Grid2, Typography } from "@mui/material";
+import CameraIcon from "@mui/icons-material/Camera";
 import DownloadIcon from '@mui/icons-material/Download';
 
 import BannerMe from "./BannerMe";
@@ -15,6 +17,9 @@ import "./AboutMe.css";
 function AboutMe() {
     const{ aboutMeUrl, baseUrl } = useUrl();
     const[aboutMeText, setAboutMeText] = useState();
+    
+    console.log(resume);
+    console.log(baseUrl, aboutMeUrl);
 
     useEffect(() => {
         fetch(baseUrl + aboutMeUrl)
@@ -48,12 +53,32 @@ function AboutMe() {
                                 A Little about Me!
                             </Typography>
                         </Grid2>
-                        <Grid2 size={6}>
+                        <Grid2 
+                            display="flex" 
+                            alignItems="flex-begin" 
+                            justify="flex-begin" 
+                            size={6} 
+                            // offset={{ md: 10 }}
+                        >
                             <a href={resume} download="Ryon-Timothy_Resume">
                                 <IconLabelButton 
                                     icon={<DownloadIcon />}
                                     label="Download Resume"/>
                             </a>
+                        </Grid2>
+                        <Grid2 
+                            display="flex" 
+                            alignItems="flex-end" 
+                            justify="flex-end" 
+                            size={6} 
+                            offset={{ md: 10 }}
+                        >
+                            {/* <Typography>Photography</Typography> */}
+                            <NavLink
+                                to = {`/photography`}
+                                className={"link"}>
+                                <CameraIcon />
+                            </NavLink>
                         </Grid2>
                     </Item>
                 </Grid2>

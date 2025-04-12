@@ -13,7 +13,7 @@ def seed_data():
     except Exception as e:
         print(f"Error deleting data: {e}")
 
-# seed mobile wallpaper 
+# seed vertical images 
     print("adding Images...")
     image_list =[]
 
@@ -23,7 +23,7 @@ def seed_data():
         year = 2012,
         gallery = "Space",
         horizontal = False,
-        path = "/images/120428_SLO_076.jpg",
+        path = "/images/20120428_SLO_076.jpg",
     )
     image_list.append(image1)
 
@@ -33,7 +33,7 @@ def seed_data():
         year = 2013,
         gallery = "Place",
         horizontal = False,
-        path = "/images/20130418_Lille_26c.jpg",
+        path = "/images/20130418_Lille_026c.jpg",
     )
     image_list.append(image2)
 
@@ -73,7 +73,7 @@ def seed_data():
         year = 2013,
         gallery = "Place",
         horizontal = False,
-        path = "/images/20130420_Istanbul_0038.jpg",
+        path = "/images/20130420_Istanbul_038.jpg",
     )
     image_list.append(image6)
 
@@ -100,7 +100,7 @@ def seed_data():
     image9 = Image(
         title = "Dune du Pilat 682",
         location = "Dune du Pilat, France",
-        year = 2013,
+        year = 2014,
         gallery = "Place",
         horizontal = False,
         path = "/images/20140920_Dune_du_Pilat_682.jpg",
@@ -316,6 +316,279 @@ def seed_data():
         path = "/images/Winterthur_049.jpg",
     )
     image_list.append(image30)
+
+    image31 = Image(
+        title = "Utah Great Salt Lake 056",
+        location = "Utah, USA",
+        year = 2014,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/20140623_Utah_Great_Salt_Lake_056.jpg",
+    )
+    image_list.append(image31)
+
+    image32 = Image(
+        title = "Utah Salt Flats 050",
+        location = "Utah, USA",
+        year = 2014,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/20140623_Utah_Salt_Flats_050.jpg",
+    )
+    image_list.append(image32)
+    
+    image34 = Image(
+        title = "Istanbul 006",
+        location = "Istanbul, Türkiye",
+        year = 2013,
+        gallery = "From-the-Hip",
+        horizontal = False,
+        path = "/images/20130419_Istanbul_006.jpg",
+    )
+    image_list.append(image34)
+
+    image35 = Image(
+        title = "CDG 442",
+        location = "CDG, Paris, France",
+        year = 2014,
+        gallery = "Airport",
+        horizontal = False,
+        path = "/images/20140919_CDG_442.jpg",
+    )
+    image_list.append(image35)
+
+    image36 = Image(
+        title = "CDG 488",
+        location = "CDG, Paris, France",
+        year = 2014,
+        gallery = "Airport",
+        horizontal = False,
+        path = "/images/20140919_CDG_488.jpg",
+    )
+    image_list.append(image36)
+
+    image37 = Image(
+        title = "CDG 488bw",
+        location = "CDG, Paris, France",
+        year = 2014,
+        gallery = "Airport",
+        horizontal = False,
+        path = "/images/20140919_CDG_488bw.jpg",
+    )
+    image_list.append(image37)
+
+    image38 = Image(
+        title = "CDG 508",
+        location = "CDG, Paris, France",
+        year = 2014,
+        gallery = "Airport",
+        horizontal = False,
+        path = "/images/20140919_CDG_508.jpg",
+    )
+    image_list.append(image38)
+
+    image39 = Image(
+        title = "Bordeaux 844",
+        location = "Bordeaux, France",
+        year = 2014,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/20140920_Bordeaux_844c.jpg",
+    )
+    image_list.append(image39)
+
+    image40 = Image(
+        title = "Chateau Smith Haut-Lafitte 642",
+        location = "Bordeaux, France",
+        year = 2014,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/20140920_Chateau_Smith_Haut-Lafitte_642.jpg",
+    )
+    image_list.append(image40)
+
+    image41 = Image(
+        title = "Paris, France 878",
+        location = "Paris, France",
+        year = 2014,
+        gallery = "From-the-Hip",
+        horizontal = False,
+        path = "/images/20140920_Paris_878.jpg",
+    )
+    image_list.append(image41)
+
+
+    image42 = Image(
+        title = "Saint-Émilion, France 786",
+        location = "Saint-Émilion, France",
+        year = 2014,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/20140920_Saint-Emilion_786.jpg",
+    )
+    image_list.append(image42)
+
+
+    image43 = Image(
+        title = "JFK 031",
+        location = "Queens, NY, USA",
+        year = 2018,
+        gallery = "Airport",
+        horizontal = False,
+        path = "/images/20180915_JFK_031.jpg",
+    )
+    image_list.append(image43)
+
+    image44 = Image(
+        title = "Amangiri 085",
+        location = "Canyon Point, UT, USA",
+        year = 2018,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/20180917_Amangiri_085.jpg",
+    )
+    image_list.append(image44)
+
+    image45 = Image(
+        title = "Amangiri 088",
+        location = "Canyon Point, UT, USA",
+        year = 2018,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/20180917_Amangiri_088.jpg",
+    )
+    image_list.append(image45)
+    
+    image46 = Image(
+        title = "Amangiri 090",
+        location = "Canyon Point, UT, USA",
+        year = 2018,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/20180917_Amangiri_090.jpg",
+    )
+    image_list.append(image46)
+
+    image47 = Image(
+        title = "Amangiri 093",
+        location = "Canyon Point, UT, USA",
+        year = 2018,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/20180917_Amangiri_093.jpg",
+    )
+    image_list.append(image47)
+
+    image48 = Image(
+        title = "Amangiri 098",
+        location = "Canyon Point, UT, USA",
+        year = 2018,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/20180917_Amangiri_098.jpg",
+    )
+    image_list.append(image48)
+
+    image49 = Image(
+        title = "Amangiri 114",
+        location = "Canyon Point, UT, USA",
+        year = 2018,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/20180917_Amangiri_114.jpg",
+    )
+    image_list.append(image49)
+
+    image50 = Image(
+        title = "Amangiri 133",
+        location = "Canyon Point, UT, USA",
+        year = 2018,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/20180917_Amangiri_133.jpg",
+    )
+    image_list.append(image50)
+
+    image51 = Image(
+        title = "Amangiri 140",
+        location = "Canyon Point, UT, USA",
+        year = 2018,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/20180917_Amangiri_140.jpg",
+    )
+    image_list.append(image51)
+
+    image52 = Image(
+        title = "Harpa 352",
+        location = "Reykjavîk, Iceland",
+        year = 2014,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/Harpa_352.jpg",
+    )
+    image_list.append(image52)
+
+    image53 = Image(
+        title = "Harpa 359",
+        location = "Reykjavîk, Iceland",
+        year = 2014,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/Harpa_359.jpg",
+    )
+    image_list.append(image53)
+
+    image54 = Image(
+        title = "Harpa 361",
+        location = "Reykjavîk, Iceland",
+        year = 2014,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/Harpa_361.jpg",
+    )
+    image_list.append(image54)
+
+    image55 = Image(
+        title = "Harpa 395",
+        location = "Reykjavîk, Iceland",
+        year = 2014,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/Harpa_395.jpg",
+    )
+    image_list.append(image55)
+
+    image56 = Image(
+        title = "Hallgrímskirkja 072",
+        location = "Reykjavîk, Iceland",
+        year = 2014,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/Reykjavik_072_alt.jpg",
+    )
+    image_list.append(image56)
+
+    image57 = Image(
+        title = "Harpa 161",
+        location = "Reykjavîk, Iceland",
+        year = 2014,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/Reykjavik_161.jpg",
+    )
+    image_list.append(image57)
+
+    image58 = Image(
+        title = "Harpa 166",
+        location = "Reykjavîk, Iceland",
+        year = 2014,
+        gallery = "Place",
+        horizontal = False,
+        path = "/images/Reykjavik_166.jpg",
+    )
+    image_list.append(image58)
+
 
 
 # seed horizontal images 
@@ -799,6 +1072,416 @@ def seed_data():
         path = "/images/windmills_063.jpg",
     )
     image_list.append(imageH48)
+
+    imageH49 = Image(
+        title = "SFO 002",
+        location = "SFO, South San Francisco, CA, USA",
+        year = 2013,
+        gallery = "Airport",
+        horizontal = True,
+        path = "/images/20130912_SFO_002.jpg",
+    )
+    image_list.append(imageH49)
+
+    imageH50 = Image(
+        title = "Great Salt Lake 055",
+        location = "UT, USA",
+        year = 2014,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/20140623_Utah_Great_Salt_Lake_055.jpg",
+    )
+    image_list.append(imageH50)
+
+    imageH51 = Image(
+        title = "Utah Salt Flats 039",
+        location = "UT, USA",
+        year = 2014,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/20140623_Utah_Salt_Flats_039.jpg",
+    )
+    image_list.append(imageH51)
+
+    imageH52 = Image(
+        title = "Utah Salt Flats 048",
+        location = "UT, USA",
+        year = 2014,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/20140623_Utah_Salt_Flats_048.jpg",
+    )
+    image_list.append(imageH52)
+
+    imageH53 = Image(
+        title = "Utah Salt Flats 049",
+        location = "UT, USA",
+        year = 2014,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/20140623_Utah_Salt_Flats_049.jpg",
+    )
+    image_list.append(imageH53)
+
+    imageH54 = Image(
+        title = "Zion National Park 076",
+        location = "UT, USA",
+        year = 2014,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/20140623_Utah_Zion_NP_076.jpg",
+    )
+    image_list.append(imageH54)
+
+    imageH55 = Image(
+        title = "Zion National Park 095",
+        location = "UT, USA",
+        year = 2014,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/20140623_Utah_Zion_NP_095.jpg",
+    )
+    image_list.append(imageH55)
+
+    imageH56 = Image(
+        title = "CDG 454",
+        location = "CDG, Paris, France",
+        year = 2014,
+        gallery = "Airport",
+        horizontal = True,
+        path = "/images/20140919_CDG_454bw.jpg",
+    )
+    image_list.append(imageH56)
+
+    imageH57 = Image(
+        title = "CDG 457",
+        location = "CDG, Paris, France",
+        year = 2014,
+        gallery = "Airport",
+        horizontal = True,
+        path = "/images/20140919_CDG_457.jpg",
+    )
+    image_list.append(imageH57)
+
+    imageH58 = Image(
+        title = "CDG 513",
+        location = "CDG, Paris, France",
+        year = 2014,
+        gallery = "Airport",
+        horizontal = True,
+        path = "/images/20140919_CDG_513.jpg",
+    )
+    image_list.append(imageH58)
+
+    imageH59 = Image(
+        title = "Chateaux Haut-Bailly 538",
+        location = "Bordeaux, France",
+        year = 2014,
+        gallery = "Space",
+        horizontal = True,
+        path = "/images/20140920_Chateau_Haut_Bailly_538.jpg",
+    )
+    image_list.append(imageH59)
+
+    imageH60 = Image(
+        title = "Saint-Émilion, France 729",
+        location = "Saint-Émilion, France",
+        year = 2014,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/20140920_Saint-Emilion_729.jpg",
+    )
+    image_list.append(imageH60)
+
+    imageH61 = Image(
+        title = "Saint-Émilion, France 736",
+        location = "Saint-Émilion, France",
+        year = 2014,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/20140920_Saint-Emilion_736.jpg",
+    )
+    image_list.append(imageH61)
+
+    imageH62 = Image(
+        title = "Saint-Émilion, France 793",
+        location = "Saint-Émilion, France",
+        year = 2014,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/20140920_Saint-Emilion_793.jpg",
+    )
+    image_list.append(imageH62)
+
+    imageH63 = Image(
+        title = "JFK 001",
+        location = "JFK, Queens, NY, USA",
+        year = 2018,
+        gallery = "Airport",
+        horizontal = True,
+        path = "/images/20180915_JFK_001.jpg",
+    )
+    image_list.append(imageH63)
+
+    imageH64 = Image(
+        title = "JFK 038",
+        location = "JFK, Queens, NY, USA",
+        year = 2018,
+        gallery = "Airport",
+        horizontal = True,
+        path = "/images/20180915_JFK_038.jpg",
+    )
+    image_list.append(imageH64)
+
+    imageH65 = Image(
+        title = "Page, AZ 044",
+        location = "Page, AZ, USA",
+        year = 2018,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/20180916_Page-AZ_044.jpg",
+    )
+    image_list.append(imageH65)
+
+    imageH66 = Image(
+        title = "Page, AZ 047",
+        location = "Page, AZ, USA",
+        year = 2018,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/20180916_Page-AZ_047.jpg",
+    )
+    image_list.append(imageH66)
+
+    imageH67 = Image(
+        title = "Page, AZ 048",
+        location = "Page, AZ, USA",
+        year = 2018,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/20180916_Page-AZ_048.jpg",
+    )
+    image_list.append(imageH67)
+
+    imageH68 = Image(
+        title = "Amangiri 067",
+        location = "Canyon Point, UT, USA",
+        year = 2018,
+        gallery = "Space",
+        horizontal = True,
+        path = "/images/20180917_Amangiri_067.jpg",
+    )
+    image_list.append(imageH68)
+
+    imageH69 = Image(
+        title = "Amangiri 069",
+        location = "Canyon Point, UT, USA",
+        year = 2018,
+        gallery = "Space",
+        horizontal = True,
+        path = "/images/20180917_Amangiri_069.jpg",
+    )
+    image_list.append(imageH69)
+
+    imageH70 = Image(
+        title = "Amangiri 080",
+        location = "Canyon Point, UT, USA",
+        year = 2018,
+        gallery = "Space",
+        horizontal = True,
+        path = "/images/20180917_Amangiri_080.jpg",
+    )
+    image_list.append(imageH70)
+
+    imageH71 = Image(
+        title = "Amangiri 082",
+        location = "Canyon Point, UT, USA",
+        year = 2018,
+        gallery = "Space",
+        horizontal = True,
+        path = "/images/20180917_Amangiri_082.jpg",
+    )
+    image_list.append(imageH71)
+
+    imageH72 = Image(
+        title = "Amangiri 101",
+        location = "Canyon Point, UT, USA",
+        year = 2018,
+        gallery = "Space",
+        horizontal = True,
+        path = "/images/20180917_Amangiri_101.jpg",
+    )
+    image_list.append(imageH72)
+
+    imageH73 = Image(
+        title = "Amangiri 103",
+        location = "Canyon Point, UT, USA",
+        year = 2018,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/20180917_Amangiri_103.jpg",
+    )
+    image_list.append(imageH73)
+
+    imageH74 = Image(
+        title = "Amangiri 109",
+        location = "Canyon Point, UT, USA",
+        year = 2018,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/20180917_Amangiri_109.jpg",
+    )
+    image_list.append(imageH74)
+
+    imageH75 = Image(
+        title = "Amangiri 127",
+        location = "Canyon Point, UT, USA",
+        year = 2018,
+        gallery = "Space",
+        horizontal = True,
+        path = "/images/20180917_Amangiri_127.jpg",
+    )
+    image_list.append(imageH75)
+
+    imageH76 = Image(
+        title = "Amangiri 154",
+        location = "Canyon Point, UT, USA",
+        year = 2018,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/20180917_Amangiri_154.jpg",
+    )
+    image_list.append(imageH76)
+
+    imageH77 = Image(
+        title = "Amangiri 156",
+        location = "Canyon Point, UT, USA",
+        year = 2018,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/20180917_Amangiri_156.jpg",
+    )
+    image_list.append(imageH77)
+
+    imageH78 = Image(
+        title = "Amangiri 158",
+        location = "Canyon Point, UT, USA",
+        year = 2018,
+        gallery = "Space",
+        horizontal = True,
+        path = "/images/20180917_Amangiri_158.jpg",
+    )
+    image_list.append(imageH78)
+
+    imageH79 = Image(
+        title = "Iceland 175",
+        location = "Golden Circle, Iceland",
+        year = 2014,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/Golden_Circle_175.jpg",
+    )
+    image_list.append(imageH79)
+
+    imageH80 = Image(
+        title = "Iceland 204",
+        location = "Golden Circle, Iceland",
+        year = 2014,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/Golden_Circle_204.jpg",
+    )
+    image_list.append(imageH80)
+
+    imageH81 = Image(
+        title = "Iceland 220",
+        location = "Golden Circle, Iceland",
+        year = 2014,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/Golden_Circle_220.jpg",
+    )
+    image_list.append(imageH81)
+
+    imageH82 = Image(
+        title = "Iceland 322",
+        location = "Golden Circle, Iceland",
+        year = 2014,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/Golden_Circle_322.jpg",
+    )
+    image_list.append(imageH82)
+
+    imageH83 = Image(
+        title = "Iceland 339",
+        location = "Golden Circle, Iceland",
+        year = 2014,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/Golden_Circle_339.jpg",
+    )
+    image_list.append(imageH83)
+
+    imageH84 = Image(
+        title = "Harpa 364",
+        location = "Reykjavik, Iceland",
+        year = 2014,
+        gallery = "Space",
+        horizontal = True,
+        path = "/images/Harpa_364.jpg",
+    )
+    image_list.append(imageH84)
+
+    imageH85 = Image(
+        title = "Harpa 375",
+        location = "Reykjavik, Iceland",
+        year = 2014,
+        gallery = "Space",
+        horizontal = True,
+        path = "/images/Harpa_375.jpg",
+    )
+    image_list.append(imageH85)
+
+    imageH86 = Image(
+        title = "Harpa 381",
+        location = "Reykjavik, Iceland",
+        year = 2014,
+        gallery = "Space",
+        horizontal = True,
+        path = "/images/Harpa_381.jpg",
+    )
+    image_list.append(imageH86)
+
+    imageH87 = Image(
+        title = "Hallgrimskirka 094",
+        location = "Reykjavik, Iceland",
+        year = 2014,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/Reykjavik_094.jpg",
+    )
+    image_list.append(imageH87)
+
+    imageH88 = Image(
+        title = "Hallgrimskirka 107",
+        location = "Reykjavik, Iceland",
+        year = 2014,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/Reykjavik_107.jpg",
+    )
+    image_list.append(imageH88)
+
+    imageH89 = Image(
+        title = "Harpa 171",
+        location = "Reykjavik, Iceland",
+        year = 2014,
+        gallery = "Place",
+        horizontal = True,
+        path = "/images/Reykjavik_171.jpg",
+    )
+    image_list.append(imageH89)
 
     # print(image_list)
 
