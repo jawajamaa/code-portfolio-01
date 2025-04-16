@@ -1,13 +1,14 @@
 import React from "react";
 
 // NOTE: most likely only one resusable Overlay page will be needed!
+function CustomGalleryOverlay() {
 
-function AirportOverlay() {
     return(
         <>
-            <h3>Airport Layover or Overlay...</h3>
+            <h1>This is the Custom Gallery Overlay</h1>
         </>
-    )
-};
 
-export default AirportOverlay;
+    )
+}
+
+export default CustomGalleryOverlay;

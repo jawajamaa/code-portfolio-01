@@ -191,7 +191,7 @@ def seed_data():
         title = "Petronas Twin Towers",
         location = "Kuala Lumpur, Malaysia",
         year = 2008,
-        gallery = "Space",
+        gallery = "Place",
         horizontal = False,
         path = "/images/kuala_lumpur_075.jpg",
     )
@@ -201,7 +201,7 @@ def seed_data():
         title = "Menara Kuala Lumpur",
         location = "Kuala Lumpur, Malaysia",
         year = 2008,
-        gallery = "Space",
+        gallery = "Place",
         horizontal = False,
         path = "/images/kuala_lumpur_081.jpg",
     )
@@ -211,7 +211,7 @@ def seed_data():
         title = "Kuala Lumpur High Rise",
         location = "Kuala Lumpur, Malaysia",
         year = 2008,
-        gallery = "Space",
+        gallery = "Place",
         horizontal = False,
         path = "/images/kuala_lumpur_101_crop_symtcl.jpg",
     )
@@ -221,7 +221,7 @@ def seed_data():
         title = "Menara Kuala Lumpur",
         location = "Kuala Lumpur, Malaysia",
         year = 2008,
-        gallery = "Space",
+        gallery = "Place",
         horizontal = False,
         path = "/images/kuala_lumpur_137.jpg",
     )
@@ -357,15 +357,15 @@ def seed_data():
     )
     image_list.append(image35)
 
-    image36 = Image(
-        title = "CDG 488",
-        location = "CDG, Paris, France",
-        year = 2014,
-        gallery = "Airport",
-        horizontal = False,
-        path = "/images/20140919_CDG_488.jpg",
-    )
-    image_list.append(image36)
+    # image36 = Image(
+    #     title = "CDG 488",
+    #     location = "CDG, Paris, France",
+    #     year = 2014,
+    #     gallery = "Airport",
+    #     horizontal = False,
+    #     path = "/images/20140919_CDG_488.jpg",
+    # )
+    # image_list.append(image36)
 
     image37 = Image(
         title = "CDG 488bw",
@@ -401,7 +401,7 @@ def seed_data():
         title = "Chateau Smith Haut-Lafitte 642",
         location = "Bordeaux, France",
         year = 2014,
-        gallery = "Place",
+        gallery = "Space",
         horizontal = False,
         path = "/images/20140920_Chateau_Smith_Haut-Lafitte_642.jpg",
     )
@@ -431,7 +431,7 @@ def seed_data():
 
     image43 = Image(
         title = "JFK 031",
-        location = "Queens, NY, USA",
+        location = "JFK, Queens, NY, USA",
         year = 2018,
         gallery = "Airport",
         horizontal = False,
@@ -523,7 +523,7 @@ def seed_data():
         title = "Harpa 352",
         location = "Reykjavîk, Iceland",
         year = 2014,
-        gallery = "Place",
+        gallery = "Space",
         horizontal = False,
         path = "/images/Harpa_352.jpg",
     )
@@ -533,7 +533,7 @@ def seed_data():
         title = "Harpa 359",
         location = "Reykjavîk, Iceland",
         year = 2014,
-        gallery = "Place",
+        gallery = "Space",
         horizontal = False,
         path = "/images/Harpa_359.jpg",
     )
@@ -543,7 +543,7 @@ def seed_data():
         title = "Harpa 361",
         location = "Reykjavîk, Iceland",
         year = 2014,
-        gallery = "Place",
+        gallery = "Space",
         horizontal = False,
         path = "/images/Harpa_361.jpg",
     )
@@ -553,7 +553,7 @@ def seed_data():
         title = "Harpa 395",
         location = "Reykjavîk, Iceland",
         year = 2014,
-        gallery = "Place",
+        gallery = "Space",
         horizontal = False,
         path = "/images/Harpa_395.jpg",
     )
@@ -697,7 +697,7 @@ def seed_data():
         title = "Grand Bazaar 009",
         location = "Istanbul, Türkiye",
         year = 2013,
-        gallery = "Space",
+        gallery = "From-the-Hip",
         horizontal = True,
         path = "/images/20130419_Istanbul_009.jpg",
     )
@@ -717,7 +717,7 @@ def seed_data():
         title = "SFO 009",
         location = "San Francisco, CA, USA",
         year = 2013,
-        gallery = "Space",
+        gallery = "Airport",
         horizontal = True,
         path = "/images/20130912_SFO_009.jpg",
     )
@@ -727,7 +727,7 @@ def seed_data():
         title = "IAD 014",
         location = "Dulles, VA, USA",
         year = 2013,
-        gallery = "Space",
+        gallery = "Airport",
         horizontal = True,
         path = "/images/20131019_IAD_014.jpg",
     )
@@ -737,7 +737,7 @@ def seed_data():
         title = "IAD 002",
         location = "Dulles, VA, USA",
         year = 2013,
-        gallery = "Space",
+        gallery = "Airport",
         horizontal = True,
         path = "/images/20131021_IAD_002.jpg",
     )
@@ -747,7 +747,7 @@ def seed_data():
         title = "IAD 009",
         location = "Dulles, VA, USA",
         year = 2013,
-        gallery = "Space",
+        gallery = "Airport",
         horizontal = True,
         path = "/images/20131021_IAD_009.jpg",
     )
@@ -757,7 +757,7 @@ def seed_data():
         title = "IAD 038",
         location = "Dulles, VA, USA",
         year = 2013,
-        gallery = "Space",
+        gallery = "Airport",
         horizontal = True,
         path = "/images/20131021_IAD_038.jpg",
     )
@@ -917,7 +917,7 @@ def seed_data():
         title = "Macau Tower 130",
         location = "Macau, SAR of PRC",
         year = 2008,
-        gallery = "Place",
+        gallery = "Space",
         horizontal = True,
         path = "/images/macau_130.jpg",
     )
@@ -1037,7 +1037,7 @@ def seed_data():
         title = "Appenzeller Schaukäserei 011",
         location = "Switzerland",
         year = 2011,
-        gallery = "Place",
+        gallery = "Space",
         horizontal = True,
         path = "/images/Schaukaserei_011.jpg",
     )
@@ -1494,7 +1494,7 @@ def seed_data():
         db.session.rollback()
 
     
-    # print("Db seed complete - now it's entirely up to you!!")
+    print("Db seed complete - now it's entirely up to you!!")
 
 if __name__ == '__main__':
     with app.app_context():

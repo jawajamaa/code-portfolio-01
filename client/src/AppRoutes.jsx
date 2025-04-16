@@ -11,7 +11,8 @@ import Place from "./components/Place";
 import PlaceOverlay from "./components/PlaceOverlay";
 import Space from "./components/Space";
 import SpaceOverlay from "./components/SpaceOverlay";
-
+import CustomGallery from "./components/CustomGallery";
+import ImageOverlay from "./components/ImageOverlay";
 
 const routes = [
     {
@@ -38,7 +39,7 @@ const routes = [
             {
                 path: "/photography/space/:id",
                 element: <SpaceOverlay />
-                // or just one Overlay component?Possibly not..
+                // or just one Overlay component?Possibly not.. or 2 - Horizontal and Vertical?
             },
             {
                 path: "/photography/place",
@@ -63,6 +64,14 @@ const routes = [
             {
                 path: "/photography/from-the-hip/:id",
                 element: <FromTheHipOverlay />
+            },
+            {
+                path: "/photography/customgallery",
+                element: <CustomGallery />
+            },
+            {
+                path: "/photography/customgallery/:id",
+                element: <ImageOverlay />
             },
         ]
     }
